@@ -16,5 +16,4 @@ doc/api/
 coverage/
 coverage_badge.svg
 
-test_resources/**/*.lock
-test_resources/**/*.log
+example/*.lock

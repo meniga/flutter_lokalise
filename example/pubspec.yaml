@@ -1,0 +1,11 @@
+name: flutter_lokalise_example
+
+dev_dependencies:
+  flutter_lokalise:
+    path: ..
+
+flutter_lokalise:
+  project_id: YOUR_LOKALISE_PROJECT_ID
+  api_token: YOUR_LOKALISE_API_TOKEN
+  include_tags:
+    - tagged_key
