@@ -14,6 +14,7 @@ abstract class FilesDownloadRequestBody implements _$FilesDownloadRequestBody {
     @nullable @JsonKey(name: "include_tags") Iterable<String> includeTags,
     @nullable @JsonKey(name: "include_comments") @Default(true) bool includeComments,
     @nullable @JsonKey(name: "include_description") @Default(true) bool includeDescription,
+    @nullable @JsonKey(name: "json_unescaped_slashes") @Default(true) bool jsonUnescapedSlashes,
   }) = _FilesDownloadRequestBody;
 
   factory FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =>

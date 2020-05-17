@@ -5,6 +5,7 @@ import 'package:archive/archive_io.dart';
 import 'package:flutter_lokalise/src/client/downloader.dart';
 import 'package:flutter_lokalise/src/command/download_command.dart';
 import 'package:flutter_lokalise/src/command/flutter_lokalise_dart_command_runner.dart';
+import 'package:logging/logging.dart';
 import 'package:mock_web_server/mock_web_server.dart';
 import 'package:test/test.dart';
 
@@ -29,11 +30,10 @@ void main() {
       final bundleZipPath = "$tempPath/bundle.zip";
       ZipFileEncoder()
         ..create(bundleZipPath)
-        ..addFile(File("$tempPath/en.json")..writeAsStringSync(stripIndent("""
-        {
-          "key": "value"
-        }
-        """)))
+        ..addFile(File("$tempPath/en.json")
+          ..writeAsStringSync(jsonEncode({
+            "key": "value",
+          })))
         ..close();
       mockWebServer.enqueue(
           body: jsonEncode({
@@ -43,9 +43,15 @@ void main() {
         downloader: LocalDownloader(),
         baseUrl: mockWebServer.url,
       );
+      final logRecords = <LogRecord>[];
+      final logger = Logger.root..onRecord.listen(logRecords.add);
 
       // when
-      await FlutterLokaliseCommandRunner([downloadCommand]).run([
+      await FlutterLokaliseCommandRunner(
+        commands: [downloadCommand],
+        logger: logger,
+      ).run([
+        "--verbose",
         "--api-token",
         "any",
         "--project-id",
@@ -60,10 +66,15 @@ void main() {
       // then
       final actualFile = File("$tempPath/lib/l10n/intl_en.arb");
       expect(actualFile.readAsStringSync(), equals(stripIndent("""
-      {
-        "@@locale": "en",
-        "key": "value"
-      }""")));
+          {
+            "@@locale": "en",
+            "key": "value"
+          }""")));
+      expect(
+          logRecords.map((record) => record.toString()),
+          containsAllInOrder([
+            startsWith("[FINE] : FilesDownloadResponseBody"),
+          ]));
     });
   });
 }
