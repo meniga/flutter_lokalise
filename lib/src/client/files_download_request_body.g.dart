@@ -17,6 +17,7 @@ _$_FilesDownloadRequestBody _$_$_FilesDownloadRequestBodyFromJson(
     includeTags: (json['include_tags'] as List)?.map((e) => e as String),
     includeComments: json['include_comments'] as bool,
     includeDescription: json['include_description'] as bool,
+    jsonUnescapedSlashes: json['json_unescaped_slashes'] as bool,
   );
 }
 
@@ -31,4 +32,5 @@ Map<String, dynamic> _$_$_FilesDownloadRequestBodyToJson(
       'include_tags': instance.includeTags?.toList(),
       'include_comments': instance.includeComments,
       'include_description': instance.includeDescription,
+      'json_unescaped_slashes': instance.jsonUnescapedSlashes,
     };

@@ -10,7 +10,7 @@ import 'download_command.dart';
 import 'flutter_lokalise_command.dart';
 
 class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
-  final Logger _logger = Logger.root;
+  final Logger _logger;
   FlutterLokaliseArgResults _flutterLokaliseArgResults;
   PubspecConfig _pubspecConfig;
 
@@ -19,12 +19,15 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   PubspecConfig get pubspecConfig => _pubspecConfig;
 
   FlutterLokaliseCommandRunner.withDefaultCommands()
-      : this([
+      : this(commands: [
           DownloadCommand(),
         ]);
 
-  FlutterLokaliseCommandRunner([List<Command<Null>> commands])
-      : super(
+  FlutterLokaliseCommandRunner({
+    List<Command<Null>> commands,
+    Logger logger,
+  })  : _logger = logger ?? Logger.root,
+        super(
           "flutter_lokalise",
           "A tool to download translation files from Lokalise and convert them to .arb files.",
         ) {

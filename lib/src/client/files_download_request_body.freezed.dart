@@ -39,7 +39,10 @@ class _$FilesDownloadRequestBodyTearOff {
           bool includeComments = true,
       @nullable
       @JsonKey(name: 'include_description')
-          bool includeDescription = true}) {
+          bool includeDescription = true,
+      @nullable
+      @JsonKey(name: 'json_unescaped_slashes')
+          bool jsonUnescapedSlashes = true}) {
     return _FilesDownloadRequestBody(
       format: format,
       originalFilenames: originalFilenames,
@@ -49,6 +52,7 @@ class _$FilesDownloadRequestBodyTearOff {
       includeTags: includeTags,
       includeComments: includeComments,
       includeDescription: includeDescription,
+      jsonUnescapedSlashes: jsonUnescapedSlashes,
     );
   }
 }
@@ -79,6 +83,9 @@ mixin _$FilesDownloadRequestBody {
   @nullable
   @JsonKey(name: 'include_description')
   bool get includeDescription;
+  @nullable
+  @JsonKey(name: 'json_unescaped_slashes')
+  bool get jsonUnescapedSlashes;
 
   Map<String, dynamic> toJson();
   $FilesDownloadRequestBodyCopyWith<FilesDownloadRequestBody> get copyWith;
@@ -90,13 +97,30 @@ abstract class $FilesDownloadRequestBodyCopyWith<$Res> {
       _$FilesDownloadRequestBodyCopyWithImpl<$Res>;
   $Res call(
       {String format,
-      @nullable @JsonKey(name: 'original_filenames') bool originalFilenames,
-      @nullable @JsonKey(name: 'all_platforms') bool allPlatforms,
-      @nullable @JsonKey(name: 'plural_format') String pluralFormat,
-      @nullable @JsonKey(name: 'placeholder_format') String placeholderFormat,
-      @nullable @JsonKey(name: 'include_tags') Iterable<String> includeTags,
-      @nullable @JsonKey(name: 'include_comments') bool includeComments,
-      @nullable @JsonKey(name: 'include_description') bool includeDescription});
+      @nullable
+      @JsonKey(name: 'original_filenames')
+          bool originalFilenames,
+      @nullable
+      @JsonKey(name: 'all_platforms')
+          bool allPlatforms,
+      @nullable
+      @JsonKey(name: 'plural_format')
+          String pluralFormat,
+      @nullable
+      @JsonKey(name: 'placeholder_format')
+          String placeholderFormat,
+      @nullable
+      @JsonKey(name: 'include_tags')
+          Iterable<String> includeTags,
+      @nullable
+      @JsonKey(name: 'include_comments')
+          bool includeComments,
+      @nullable
+      @JsonKey(name: 'include_description')
+          bool includeDescription,
+      @nullable
+      @JsonKey(name: 'json_unescaped_slashes')
+          bool jsonUnescapedSlashes});
 }
 
 class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
@@ -117,6 +141,7 @@ class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
     Object includeTags = freezed,
     Object includeComments = freezed,
     Object includeDescription = freezed,
+    Object jsonUnescapedSlashes = freezed,
   }) {
     return _then(_value.copyWith(
       format: format == freezed ? _value.format : format as String,
@@ -140,6 +165,9 @@ class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
       includeDescription: includeDescription == freezed
           ? _value.includeDescription
           : includeDescription as bool,
+      jsonUnescapedSlashes: jsonUnescapedSlashes == freezed
+          ? _value.jsonUnescapedSlashes
+          : jsonUnescapedSlashes as bool,
     ));
   }
 }
@@ -152,13 +180,30 @@ abstract class _$FilesDownloadRequestBodyCopyWith<$Res>
   @override
   $Res call(
       {String format,
-      @nullable @JsonKey(name: 'original_filenames') bool originalFilenames,
-      @nullable @JsonKey(name: 'all_platforms') bool allPlatforms,
-      @nullable @JsonKey(name: 'plural_format') String pluralFormat,
-      @nullable @JsonKey(name: 'placeholder_format') String placeholderFormat,
-      @nullable @JsonKey(name: 'include_tags') Iterable<String> includeTags,
-      @nullable @JsonKey(name: 'include_comments') bool includeComments,
-      @nullable @JsonKey(name: 'include_description') bool includeDescription});
+      @nullable
+      @JsonKey(name: 'original_filenames')
+          bool originalFilenames,
+      @nullable
+      @JsonKey(name: 'all_platforms')
+          bool allPlatforms,
+      @nullable
+      @JsonKey(name: 'plural_format')
+          String pluralFormat,
+      @nullable
+      @JsonKey(name: 'placeholder_format')
+          String placeholderFormat,
+      @nullable
+      @JsonKey(name: 'include_tags')
+          Iterable<String> includeTags,
+      @nullable
+      @JsonKey(name: 'include_comments')
+          bool includeComments,
+      @nullable
+      @JsonKey(name: 'include_description')
+          bool includeDescription,
+      @nullable
+      @JsonKey(name: 'json_unescaped_slashes')
+          bool jsonUnescapedSlashes});
 }
 
 class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
@@ -182,6 +227,7 @@ class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
     Object includeTags = freezed,
     Object includeComments = freezed,
     Object includeDescription = freezed,
+    Object jsonUnescapedSlashes = freezed,
   }) {
     return _then(_FilesDownloadRequestBody(
       format: format == freezed ? _value.format : format as String,
@@ -205,6 +251,9 @@ class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
       includeDescription: includeDescription == freezed
           ? _value.includeDescription
           : includeDescription as bool,
+      jsonUnescapedSlashes: jsonUnescapedSlashes == freezed
+          ? _value.jsonUnescapedSlashes
+          : jsonUnescapedSlashes as bool,
     ));
   }
 }
@@ -234,7 +283,10 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
           this.includeComments = true,
       @nullable
       @JsonKey(name: 'include_description')
-          this.includeDescription = true})
+          this.includeDescription = true,
+      @nullable
+      @JsonKey(name: 'json_unescaped_slashes')
+          this.jsonUnescapedSlashes = true})
       : assert(format != null);
 
   factory _$_FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =>
@@ -270,10 +322,14 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
   @nullable
   @JsonKey(name: 'include_description')
   final bool includeDescription;
+  @override
+  @nullable
+  @JsonKey(name: 'json_unescaped_slashes')
+  final bool jsonUnescapedSlashes;
 
   @override
   String toString() {
-    return 'FilesDownloadRequestBody(format: $format, originalFilenames: $originalFilenames, allPlatforms: $allPlatforms, pluralFormat: $pluralFormat, placeholderFormat: $placeholderFormat, includeTags: $includeTags, includeComments: $includeComments, includeDescription: $includeDescription)';
+    return 'FilesDownloadRequestBody(format: $format, originalFilenames: $originalFilenames, allPlatforms: $allPlatforms, pluralFormat: $pluralFormat, placeholderFormat: $placeholderFormat, includeTags: $includeTags, includeComments: $includeComments, includeDescription: $includeDescription, jsonUnescapedSlashes: $jsonUnescapedSlashes)';
   }
 
   @override
@@ -302,7 +358,10 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
                     .equals(other.includeComments, includeComments)) &&
             (identical(other.includeDescription, includeDescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.includeDescription, includeDescription)));
+                    .equals(other.includeDescription, includeDescription)) &&
+            (identical(other.jsonUnescapedSlashes, jsonUnescapedSlashes) ||
+                const DeepCollectionEquality()
+                    .equals(other.jsonUnescapedSlashes, jsonUnescapedSlashes)));
   }
 
   @override
@@ -315,7 +374,8 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
       const DeepCollectionEquality().hash(placeholderFormat) ^
       const DeepCollectionEquality().hash(includeTags) ^
       const DeepCollectionEquality().hash(includeComments) ^
-      const DeepCollectionEquality().hash(includeDescription);
+      const DeepCollectionEquality().hash(includeDescription) ^
+      const DeepCollectionEquality().hash(jsonUnescapedSlashes);
 
   @override
   _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
@@ -352,7 +412,10 @@ abstract class _FilesDownloadRequestBody implements FilesDownloadRequestBody {
           bool includeComments,
       @nullable
       @JsonKey(name: 'include_description')
-          bool includeDescription}) = _$_FilesDownloadRequestBody;
+          bool includeDescription,
+      @nullable
+      @JsonKey(name: 'json_unescaped_slashes')
+          bool jsonUnescapedSlashes}) = _$_FilesDownloadRequestBody;
 
   factory _FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =
       _$_FilesDownloadRequestBody.fromJson;
@@ -387,6 +450,10 @@ abstract class _FilesDownloadRequestBody implements FilesDownloadRequestBody {
   @nullable
   @JsonKey(name: 'include_description')
   bool get includeDescription;
+  @override
+  @nullable
+  @JsonKey(name: 'json_unescaped_slashes')
+  bool get jsonUnescapedSlashes;
   @override
   _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith;
 }
