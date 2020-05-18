@@ -35,7 +35,7 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
 
   @override
   FutureOr<Null> run() async {
-    final config = commandRunner.pubspecConfig;
+    final config = commandRunner.lokaliseConfig;
     final flutterLokaliseArgResults = commandRunner.flutterLokaliseArgResults;
     final downloadArgResults = _DownloadArgResults.fromArgResults(
       argResults,

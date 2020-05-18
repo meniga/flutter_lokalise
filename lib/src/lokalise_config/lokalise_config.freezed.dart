@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'pubspec_config.dart';
+part of 'lokalise_config.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -9,15 +9,15 @@ part of 'pubspec_config.dart';
 
 T _$identity<T>(T value) => value;
 
-class _$PubspecConfigTearOff {
-  const _$PubspecConfigTearOff();
+class _$LokaliseConfigTearOff {
+  const _$LokaliseConfigTearOff();
 
-  _PubspecConfig call(
+  _LokaliseConfig call(
       {String projectId,
       String apiToken,
       Iterable<String> includeTags,
       String output}) {
-    return _PubspecConfig(
+    return _LokaliseConfig(
       projectId: projectId,
       apiToken: apiToken,
       includeTags: includeTags,
@@ -27,21 +27,21 @@ class _$PubspecConfigTearOff {
 }
 
 // ignore: unused_element
-const $PubspecConfig = _$PubspecConfigTearOff();
+const $LokaliseConfig = _$LokaliseConfigTearOff();
 
-mixin _$PubspecConfig {
+mixin _$LokaliseConfig {
   String get projectId;
   String get apiToken;
   Iterable<String> get includeTags;
   String get output;
 
-  $PubspecConfigCopyWith<PubspecConfig> get copyWith;
+  $LokaliseConfigCopyWith<LokaliseConfig> get copyWith;
 }
 
-abstract class $PubspecConfigCopyWith<$Res> {
-  factory $PubspecConfigCopyWith(
-          PubspecConfig value, $Res Function(PubspecConfig) then) =
-      _$PubspecConfigCopyWithImpl<$Res>;
+abstract class $LokaliseConfigCopyWith<$Res> {
+  factory $LokaliseConfigCopyWith(
+          LokaliseConfig value, $Res Function(LokaliseConfig) then) =
+      _$LokaliseConfigCopyWithImpl<$Res>;
   $Res call(
       {String projectId,
       String apiToken,
@@ -49,13 +49,13 @@ abstract class $PubspecConfigCopyWith<$Res> {
       String output});
 }
 
-class _$PubspecConfigCopyWithImpl<$Res>
-    implements $PubspecConfigCopyWith<$Res> {
-  _$PubspecConfigCopyWithImpl(this._value, this._then);
+class _$LokaliseConfigCopyWithImpl<$Res>
+    implements $LokaliseConfigCopyWith<$Res> {
+  _$LokaliseConfigCopyWithImpl(this._value, this._then);
 
-  final PubspecConfig _value;
+  final LokaliseConfig _value;
   // ignore: unused_field
-  final $Res Function(PubspecConfig) _then;
+  final $Res Function(LokaliseConfig) _then;
 
   @override
   $Res call({
@@ -75,11 +75,11 @@ class _$PubspecConfigCopyWithImpl<$Res>
   }
 }
 
-abstract class _$PubspecConfigCopyWith<$Res>
-    implements $PubspecConfigCopyWith<$Res> {
-  factory _$PubspecConfigCopyWith(
-          _PubspecConfig value, $Res Function(_PubspecConfig) then) =
-      __$PubspecConfigCopyWithImpl<$Res>;
+abstract class _$LokaliseConfigCopyWith<$Res>
+    implements $LokaliseConfigCopyWith<$Res> {
+  factory _$LokaliseConfigCopyWith(
+          _LokaliseConfig value, $Res Function(_LokaliseConfig) then) =
+      __$LokaliseConfigCopyWithImpl<$Res>;
   @override
   $Res call(
       {String projectId,
@@ -88,15 +88,15 @@ abstract class _$PubspecConfigCopyWith<$Res>
       String output});
 }
 
-class __$PubspecConfigCopyWithImpl<$Res>
-    extends _$PubspecConfigCopyWithImpl<$Res>
-    implements _$PubspecConfigCopyWith<$Res> {
-  __$PubspecConfigCopyWithImpl(
-      _PubspecConfig _value, $Res Function(_PubspecConfig) _then)
-      : super(_value, (v) => _then(v as _PubspecConfig));
+class __$LokaliseConfigCopyWithImpl<$Res>
+    extends _$LokaliseConfigCopyWithImpl<$Res>
+    implements _$LokaliseConfigCopyWith<$Res> {
+  __$LokaliseConfigCopyWithImpl(
+      _LokaliseConfig _value, $Res Function(_LokaliseConfig) _then)
+      : super(_value, (v) => _then(v as _LokaliseConfig));
 
   @override
-  _PubspecConfig get _value => super._value as _PubspecConfig;
+  _LokaliseConfig get _value => super._value as _LokaliseConfig;
 
   @override
   $Res call({
@@ -105,7 +105,7 @@ class __$PubspecConfigCopyWithImpl<$Res>
     Object includeTags = freezed,
     Object output = freezed,
   }) {
-    return _then(_PubspecConfig(
+    return _then(_LokaliseConfig(
       projectId: projectId == freezed ? _value.projectId : projectId as String,
       apiToken: apiToken == freezed ? _value.apiToken : apiToken as String,
       includeTags: includeTags == freezed
@@ -116,8 +116,8 @@ class __$PubspecConfigCopyWithImpl<$Res>
   }
 }
 
-class _$_PubspecConfig implements _PubspecConfig {
-  _$_PubspecConfig(
+class _$_LokaliseConfig implements _LokaliseConfig {
+  const _$_LokaliseConfig(
       {this.projectId, this.apiToken, this.includeTags, this.output});
 
   @override
@@ -131,13 +131,13 @@ class _$_PubspecConfig implements _PubspecConfig {
 
   @override
   String toString() {
-    return 'PubspecConfig(projectId: $projectId, apiToken: $apiToken, includeTags: $includeTags, output: $output)';
+    return 'LokaliseConfig(projectId: $projectId, apiToken: $apiToken, includeTags: $includeTags, output: $output)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PubspecConfig &&
+        (other is _LokaliseConfig &&
             (identical(other.projectId, projectId) ||
                 const DeepCollectionEquality()
                     .equals(other.projectId, projectId)) &&
@@ -160,16 +160,16 @@ class _$_PubspecConfig implements _PubspecConfig {
       const DeepCollectionEquality().hash(output);
 
   @override
-  _$PubspecConfigCopyWith<_PubspecConfig> get copyWith =>
-      __$PubspecConfigCopyWithImpl<_PubspecConfig>(this, _$identity);
+  _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith =>
+      __$LokaliseConfigCopyWithImpl<_LokaliseConfig>(this, _$identity);
 }
 
-abstract class _PubspecConfig implements PubspecConfig {
-  factory _PubspecConfig(
+abstract class _LokaliseConfig implements LokaliseConfig {
+  const factory _LokaliseConfig(
       {String projectId,
       String apiToken,
       Iterable<String> includeTags,
-      String output}) = _$_PubspecConfig;
+      String output}) = _$_LokaliseConfig;
 
   @override
   String get projectId;
@@ -180,5 +180,5 @@ abstract class _PubspecConfig implements PubspecConfig {
   @override
   String get output;
   @override
-  _$PubspecConfigCopyWith<_PubspecConfig> get copyWith;
+  _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith;
 }

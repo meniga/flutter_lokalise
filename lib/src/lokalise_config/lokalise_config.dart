@@ -1,21 +1,21 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
-part 'pubspec_config.freezed.dart';
+part 'lokalise_config.freezed.dart';
 
 @freezed
-abstract class PubspecConfig implements _$PubspecConfig {
-  factory PubspecConfig({
+abstract class LokaliseConfig implements _$LokaliseConfig {
+  const factory LokaliseConfig({
     String projectId,
     String apiToken,
     Iterable<String> includeTags,
     String output,
-  }) = _PubspecConfig;
+  }) = _LokaliseConfig;
 
-  factory PubspecConfig.fromPubspecYamlString(String yamlString) {
+  factory LokaliseConfig.fromPubspecYamlString(String yamlString) {
     final yaml = loadYamlNode(yamlString);
     final flutterLokalise = yaml.getOrNull<YamlMap>("flutter_lokalise");
-    return PubspecConfig(
+    return LokaliseConfig(
       projectId: flutterLokalise?.getAsStringOrNull("project_id"),
       apiToken: flutterLokalise?.getAsStringOrNull("api_token"),
       includeTags:

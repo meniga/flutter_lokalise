@@ -7,6 +7,7 @@ import 'package:meta/meta.dart';
 import 'package:quiver/check.dart';
 
 import 'files_download_response_body.dart';
+import 'lokalise_response.dart';
 
 class LokaliseClient {
   static const _xApiTokenHeader = "x-api-token";
@@ -43,23 +44,4 @@ class LokaliseClient {
         body: jsonEncode(requestBody.toJson()));
     return LokaliseResponse.from(response, (json) => FilesDownloadResponseBody.fromJson(json));
   }
-}
-
-typedef FromJson<T> = T Function(Map<String, dynamic>);
-
-class LokaliseResponse<T> {
-  final Response innerResponse;
-  final FromJson<T> _fromJson;
-
-  LokaliseResponse(this.innerResponse, this._fromJson) {
-    checkNotNull(innerResponse);
-    checkNotNull(_fromJson);
-  }
-
-  T get typedBody => _fromJson(json.decode(innerResponse.body) as Map<String, dynamic>);
-
-  bool get wasSuccessful => 200 >= innerResponse.statusCode && innerResponse.statusCode < 300;
-
-  factory LokaliseResponse.from(Response response, FromJson<T> fromJson) =>
-      LokaliseResponse<T>(response, fromJson);
 }
