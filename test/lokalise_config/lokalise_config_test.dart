@@ -1,10 +1,10 @@
-import 'package:flutter_lokalise/src/pubspec_config/pubspec_config.dart';
+import 'package:flutter_lokalise/src/lokalise_config/lokalise_config.dart';
 import 'package:test/test.dart';
 
 import '../trimmer.dart';
 
 void main() {
-  group("pubspec config", () {
+  group("lokalise config", () {
     test("should be created from pubspec yaml", () {
       // given
       final yamlString = stripIndent("""
@@ -19,7 +19,7 @@ void main() {
       """);
 
       // when
-      final actual = PubspecConfig.fromPubspecYamlString(yamlString);
+      final actual = LokaliseConfig.fromPubspecYamlString(yamlString);
 
       // then
       expect(actual.projectId, equals("44"));
@@ -30,7 +30,7 @@ void main() {
 
     test("should be empty if created from empty pubspec yaml", () {
       // when
-      final actual = PubspecConfig.fromPubspecYamlString("");
+      final actual = LokaliseConfig.fromPubspecYamlString("");
 
       // then
       expect(actual.projectId, isNull);

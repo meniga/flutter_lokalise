@@ -13,7 +13,6 @@ executables:
 dependencies:
   archive: ^2.0.11
   args: ^1.5.2
-  equatable: ^1.1.1
   json_annotation: ^3.0.1
   freezed_annotation: ^0.7.1
   http: ^0.12.1

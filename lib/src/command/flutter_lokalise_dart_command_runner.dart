@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
-import 'package:flutter_lokalise/src/pubspec_config/pubspec_config.dart';
+import 'package:flutter_lokalise/src/lokalise_config/lokalise_config.dart';
 import 'package:logging/logging.dart';
 
 import 'download_command.dart';
@@ -12,11 +12,11 @@ import 'flutter_lokalise_command.dart';
 class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   final Logger _logger;
   FlutterLokaliseArgResults _flutterLokaliseArgResults;
-  PubspecConfig _pubspecConfig;
+  LokaliseConfig _lokaliseConfig;
 
   FlutterLokaliseArgResults get flutterLokaliseArgResults => _flutterLokaliseArgResults;
 
-  PubspecConfig get pubspecConfig => _pubspecConfig;
+  LokaliseConfig get lokaliseConfig => _lokaliseConfig;
 
   FlutterLokaliseCommandRunner.withDefaultCommands()
       : this(commands: [
@@ -38,12 +38,12 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   @override
   FutureOr<Null> runCommand(ArgResults topLevelResults) {
     final workingDirectory = _determineWorkingDirectory(topLevelResults);
-    _pubspecConfig = PubspecConfig.fromPubspecYamlString(
+    _lokaliseConfig = LokaliseConfig.fromPubspecYamlString(
         File("$workingDirectory/pubspec.yaml").readAsStringSync());
     _flutterLokaliseArgResults = FlutterLokaliseArgResults.fromArgResults(
       topLevelResults,
-      fallbackApiToken: _pubspecConfig.apiToken,
-      fallbackProjectId: _pubspecConfig.projectId,
+      fallbackApiToken: _lokaliseConfig.apiToken,
+      fallbackProjectId: _lokaliseConfig.projectId,
     );
     _configureLogger(_flutterLokaliseArgResults);
     return super.runCommand(topLevelResults);
