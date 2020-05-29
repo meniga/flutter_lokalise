@@ -1,5 +1,5 @@
 name: flutter_lokalise
-version: 0.1.0
+version: 0.1.1
 description: >
   A tool to download translation files from Lokalise and convert them to .arb files.
 homepage: https://github.com/meniga/flutter_lokalise
