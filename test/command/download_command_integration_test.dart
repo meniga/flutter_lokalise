@@ -32,7 +32,8 @@ void main() {
         ..create(bundleZipPath)
         ..addFile(File("$tempPath/en.json")
           ..writeAsStringSync(jsonEncode({
-            "key": "value",
+            "newline": r"\nvalue",
+            "quote": r"\\\'",
           })))
         ..close();
       mockWebServer.enqueue(
@@ -65,11 +66,12 @@ void main() {
 
       // then
       final actualFile = File("$tempPath/lib/l10n/intl_en.arb");
-      expect(actualFile.readAsStringSync(), equals(stripIndent("""
+      expect(actualFile.readAsStringSync(), equals(stripIndent(r'''
           {
             "@@locale": "en",
-            "key": "value"
-          }""")));
+            "newline": "\nvalue",
+            "quote": "\\\'"
+          }''')));
       expect(
           logRecords.map((record) => record.toString()),
           containsAllInOrder([

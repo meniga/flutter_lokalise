@@ -20,6 +20,7 @@ dependencies:
   meta: ^1.1.8
   path: ^1.6.4
   quiver: ^2.0.5
+  string_unescape: ^1.5.1
   yaml: ^2.2.1
 
 dev_dependencies:

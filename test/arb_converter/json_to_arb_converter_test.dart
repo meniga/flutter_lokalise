@@ -5,16 +5,20 @@ import 'package:test/test.dart';
 
 void main() {
   group("json to arb converter", () {
+    final converter = JsonToArbConverter();
+
     test("should convert from json to arb", () {
       // given
-      final converter = JsonToArbConverter();
-      final jsonString = """
+      final jsonString = r"""
         {
           "challenges": {
             "challengesDaysRemaining": "{count, plural, one {{count} day to go} other {{count} days to go}}"
           },
           "login": {
             "loginTitle": "LOG IN"
+          },
+          "welcome": {
+            "welcomeSubtitle": "Your money works\nbetter here."
           },
           "global": "GLOBAL"
         }
@@ -27,11 +31,12 @@ void main() {
       );
 
       // then
-      final expected = """
+      final expected = r"""
       {
         "@@locale": "en",
         "challengesDaysRemaining": "{count, plural, one {{count} day to go} other {{count} days to go}}",
         "loginTitle": "LOG IN",
+        "welcomeSubtitle": "Your money works\nbetter here.",
         "global": "GLOBAL"
       }
       """;
