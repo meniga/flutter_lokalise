@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/meniga/flutter_lokalise.svg?branch=master)](https://travis-ci.org/meniga/flutter_lokalise)
 [![codecov](https://codecov.io/gh/meniga/flutter_lokalise/branch/master/graph/badge.svg)](https://codecov.io/gh/meniga/flutter_lokalise)
 
-A tool to download translation bundles from [Lokalise] and convert them  
+A tool to download translation bundles from [Lokalise] and convert them 
 to .arb files.
 
 Currently, it supports following commands:
@@ -25,6 +25,9 @@ flutter_lokalise:
   include_tags:
     - tag1
     - tag2
+    
+flutter_intl:
+  enabled: true
 ```
 
 Run  `flutter_lokalise`:
