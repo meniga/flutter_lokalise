@@ -9,6 +9,4 @@ analyzer:
     include_file_not_found: ignore
 
 linter:
-  # Rules: http://dart-lang.github.io/linter/lints
-  rules:
-    prefer_single_quotes: false
+  # Rules: http://dart-lang.github.io/linter/lints=

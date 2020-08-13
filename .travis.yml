@@ -16,6 +16,7 @@ install:
   - flutter pub get
 
 script:
+  - flutter pub run build_runner build --delete-conflicting-outputs --fail-on-severe
   - flutter analyze
   - flutter pub run test_coverage --no-badge
   - flutter pub run remove_from_coverage -f coverage/lcov.info -r ".g.dart$" -r ".freezed.dart$"
