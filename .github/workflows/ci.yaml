@@ -1,0 +1,54 @@
+name: ci
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            flutter_path: /opt/hostedtoolcache/flutter
+          - os: macos-latest
+            flutter_path: /Users/runner/hostedtoolcache/flutter
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ matrix.flutter_path }}
+          key: ${{ runner.os }}-flutter
+
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: 1.20.2
+
+      - name: build
+        run: |
+          flutter pub get
+          flutter pub run build_runner build --delete-conflicting-outputs --fail-on-severe
+          flutter analyze
+
+      - name: test
+        run: |
+          flutter pub run test_coverage --no-badge
+          flutter pub run remove_from_coverage -f coverage/lcov.info -r ".g.dart$" -r ".freezed.dart$"
+
+      - name: publish (dry-run)
+        run: |
+          dartdoc --no-generate-docs
+          pub publish --dry-run
+
+      - name: codecov
+        run: bash <(curl -s https://codecov.io/bash)
