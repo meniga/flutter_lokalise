@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Use different version constraints
+
 ## 0.1.2
 
 * Bump dependencies
