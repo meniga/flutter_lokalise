@@ -73,3 +73,10 @@ flutter_lokalise download
 
 [Lokalise]:https://lokalise.com
 [how to set up a global command]:https://dart.dev/tools/pub/cmd/pub-global
+
+# Publishing new version
+1. Make sure you have access to meniga.com publisher: https://pub.dev/publishers/meniga.com
+2. Bump version in pubspec.yaml, version: x.x.x
+3. Run pub publish --dry-run  and check if this package can be published
+4. Run pub publish and check if the package was published https://pub.dev/packages/flutter_lokalise/versions
+5. Go to https://github.com/meniga/flutter_lokalise/releases and create a new release by tagging the current commit
