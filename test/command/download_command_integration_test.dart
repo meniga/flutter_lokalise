@@ -30,16 +30,27 @@ void main() {
       final bundleZipPath = "$tempPath/bundle.zip";
       ZipFileEncoder()
         ..create(bundleZipPath)
-        ..addFile(File("$tempPath/en.json")
-          ..writeAsStringSync(jsonEncode({
-            "newline": r"\nvalue",
-            "quote": r"\\\'",
-          })))
+        ..addFile(
+          File("$tempPath/en.json")
+            ..writeAsStringSync(
+              jsonEncode(
+                {
+                  "newline": r"\nvalue",
+                  "quote": r"\\\'",
+                },
+              ),
+            ),
+        )
         ..close();
+
       mockWebServer.enqueue(
-          body: jsonEncode({
-        "bundle_url": bundleZipPath,
-      }));
+        body: jsonEncode(
+          {
+            "bundle_url": bundleZipPath,
+          },
+        ),
+      );
+
       final downloadCommand = DownloadCommand(
         downloader: LocalDownloader(),
         baseUrl: mockWebServer.url,
@@ -51,32 +62,46 @@ void main() {
       await FlutterLokaliseCommandRunner(
         commands: [downloadCommand],
         logger: logger,
-      ).run([
-        "--verbose",
-        "--api-token",
-        "any",
-        "--project-id",
-        "any",
-        "download",
-        "-t",
-        "tag",
-        "-o",
-        "$tempPath/lib/l10n",
-      ]);
+      ).run(
+        [
+          "--verbose",
+          "--api-token",
+          "any",
+          "--project-id",
+          "any",
+          "download",
+          "-t",
+          "tag",
+          "-o",
+          "$tempPath/lib/l10n",
+        ],
+      );
 
       // then
       final actualFile = File("$tempPath/lib/l10n/intl_en.arb");
-      expect(actualFile.readAsStringSync(), equals(stripIndent(r'''
-          {
-            "@@locale": "en",
-            "newline": "\nvalue",
-            "quote": "\\\'"
-          }''')));
       expect(
-          logRecords.map((record) => record.toString()),
-          containsAllInOrder([
+        actualFile.readAsStringSync(),
+        equals(
+          stripIndent(
+            JsonEncoder.withIndent("  ").convert(
+              {
+                "@@locale": "en",
+                "newline": r"\nvalue",
+                "quote": r"\\\'",
+              },
+            ),
+          ),
+        ),
+      );
+
+      expect(
+        logRecords.map((record) => record.toString()),
+        containsAllInOrder(
+          [
             startsWith("[FINE] : FilesDownloadResponseBody"),
-          ]));
+          ],
+        ),
+      );
     });
   });
 }
