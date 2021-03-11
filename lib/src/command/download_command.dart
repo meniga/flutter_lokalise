@@ -10,7 +10,6 @@ import 'package:flutter_lokalise/src/client/lokalise_client.dart';
 import 'package:logging/logging.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
-import 'package:string_unescape/string_unescape.dart' show unescape;
 
 import 'arg_results_extension.dart';
 import 'flutter_lokalise_command.dart';
@@ -84,7 +83,7 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
       );
       File("$output/intl_$locale.arb")
         ..createSync(recursive: true)
-        ..writeAsStringSync(unescape(JsonEncoder.withIndent("  ").convert(arbMap)));
+        ..writeAsStringSync(JsonEncoder.withIndent("  ").convert(arbMap));
     });
   }
 }
