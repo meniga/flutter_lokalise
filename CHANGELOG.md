@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Remove unescaping from download command #10
+
 ## 0.1.3
 
 * Use different version constraints
