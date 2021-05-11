@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'lokalise_config.dart';
 
@@ -9,15 +9,18 @@ part of 'lokalise_config.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$LokaliseConfigTearOff {
   const _$LokaliseConfigTearOff();
 
-// ignore: unused_element
   _LokaliseConfig call(
-      {String projectId,
-      String apiToken,
-      Iterable<String> includeTags,
-      String output}) {
+      {String? projectId,
+      String? apiToken,
+      Iterable<String>? includeTags,
+      String? output}) {
     return _LokaliseConfig(
       projectId: projectId,
       apiToken: apiToken,
@@ -27,29 +30,34 @@ class _$LokaliseConfigTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $LokaliseConfig = _$LokaliseConfigTearOff();
 
+/// @nodoc
 mixin _$LokaliseConfig {
-  String get projectId;
-  String get apiToken;
-  Iterable<String> get includeTags;
-  String get output;
+  String? get projectId => throw _privateConstructorUsedError;
+  String? get apiToken => throw _privateConstructorUsedError;
+  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
+  String? get output => throw _privateConstructorUsedError;
 
-  $LokaliseConfigCopyWith<LokaliseConfig> get copyWith;
+  @JsonKey(ignore: true)
+  $LokaliseConfigCopyWith<LokaliseConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $LokaliseConfigCopyWith<$Res> {
   factory $LokaliseConfigCopyWith(
           LokaliseConfig value, $Res Function(LokaliseConfig) then) =
       _$LokaliseConfigCopyWithImpl<$Res>;
   $Res call(
-      {String projectId,
-      String apiToken,
-      Iterable<String> includeTags,
-      String output});
+      {String? projectId,
+      String? apiToken,
+      Iterable<String>? includeTags,
+      String? output});
 }
 
+/// @nodoc
 class _$LokaliseConfigCopyWithImpl<$Res>
     implements $LokaliseConfigCopyWith<$Res> {
   _$LokaliseConfigCopyWithImpl(this._value, this._then);
@@ -60,22 +68,33 @@ class _$LokaliseConfigCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object projectId = freezed,
-    Object apiToken = freezed,
-    Object includeTags = freezed,
-    Object output = freezed,
+    Object? projectId = freezed,
+    Object? apiToken = freezed,
+    Object? includeTags = freezed,
+    Object? output = freezed,
   }) {
     return _then(_value.copyWith(
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
-      apiToken: apiToken == freezed ? _value.apiToken : apiToken as String,
+      projectId: projectId == freezed
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      apiToken: apiToken == freezed
+          ? _value.apiToken
+          : apiToken // ignore: cast_nullable_to_non_nullable
+              as String?,
       includeTags: includeTags == freezed
           ? _value.includeTags
-          : includeTags as Iterable<String>,
-      output: output == freezed ? _value.output : output as String,
+          : includeTags // ignore: cast_nullable_to_non_nullable
+              as Iterable<String>?,
+      output: output == freezed
+          ? _value.output
+          : output // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$LokaliseConfigCopyWith<$Res>
     implements $LokaliseConfigCopyWith<$Res> {
   factory _$LokaliseConfigCopyWith(
@@ -83,12 +102,13 @@ abstract class _$LokaliseConfigCopyWith<$Res>
       __$LokaliseConfigCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String projectId,
-      String apiToken,
-      Iterable<String> includeTags,
-      String output});
+      {String? projectId,
+      String? apiToken,
+      Iterable<String>? includeTags,
+      String? output});
 }
 
+/// @nodoc
 class __$LokaliseConfigCopyWithImpl<$Res>
     extends _$LokaliseConfigCopyWithImpl<$Res>
     implements _$LokaliseConfigCopyWith<$Res> {
@@ -101,34 +121,46 @@ class __$LokaliseConfigCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object projectId = freezed,
-    Object apiToken = freezed,
-    Object includeTags = freezed,
-    Object output = freezed,
+    Object? projectId = freezed,
+    Object? apiToken = freezed,
+    Object? includeTags = freezed,
+    Object? output = freezed,
   }) {
     return _then(_LokaliseConfig(
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
-      apiToken: apiToken == freezed ? _value.apiToken : apiToken as String,
+      projectId: projectId == freezed
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      apiToken: apiToken == freezed
+          ? _value.apiToken
+          : apiToken // ignore: cast_nullable_to_non_nullable
+              as String?,
       includeTags: includeTags == freezed
           ? _value.includeTags
-          : includeTags as Iterable<String>,
-      output: output == freezed ? _value.output : output as String,
+          : includeTags // ignore: cast_nullable_to_non_nullable
+              as Iterable<String>?,
+      output: output == freezed
+          ? _value.output
+          : output // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
+
+/// @nodoc
 
 class _$_LokaliseConfig implements _LokaliseConfig {
   const _$_LokaliseConfig(
       {this.projectId, this.apiToken, this.includeTags, this.output});
 
   @override
-  final String projectId;
+  final String? projectId;
   @override
-  final String apiToken;
+  final String? apiToken;
   @override
-  final Iterable<String> includeTags;
+  final Iterable<String>? includeTags;
   @override
-  final String output;
+  final String? output;
 
   @override
   String toString() {
@@ -160,6 +192,7 @@ class _$_LokaliseConfig implements _LokaliseConfig {
       const DeepCollectionEquality().hash(includeTags) ^
       const DeepCollectionEquality().hash(output);
 
+  @JsonKey(ignore: true)
   @override
   _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith =>
       __$LokaliseConfigCopyWithImpl<_LokaliseConfig>(this, _$identity);
@@ -167,19 +200,21 @@ class _$_LokaliseConfig implements _LokaliseConfig {
 
 abstract class _LokaliseConfig implements LokaliseConfig {
   const factory _LokaliseConfig(
-      {String projectId,
-      String apiToken,
-      Iterable<String> includeTags,
-      String output}) = _$_LokaliseConfig;
+      {String? projectId,
+      String? apiToken,
+      Iterable<String>? includeTags,
+      String? output}) = _$_LokaliseConfig;
 
   @override
-  String get projectId;
+  String? get projectId => throw _privateConstructorUsedError;
   @override
-  String get apiToken;
+  String? get apiToken => throw _privateConstructorUsedError;
   @override
-  Iterable<String> get includeTags;
+  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
   @override
-  String get output;
+  String? get output => throw _privateConstructorUsedError;
   @override
-  _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith;
+  @JsonKey(ignore: true)
+  _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }

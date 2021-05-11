@@ -8,44 +8,47 @@ void main() {
   group("lokalise client", () {
     final apiToken = "token";
     final projectId = "3002780358964f9bab5a92.87762498";
-    final bundleUrl = "https://s3-eu-west-1.amazonaws.com/lokalise-assets/export/MyApp-locale.zip";
+    final bundleUrl =
+        "https://s3-eu-west-1.amazonaws.com/lokalise-assets/export/MyApp-locale.zip";
 
-    LokaliseClient lokaliseClient;
-    MockWebServer mockWebServer;
+    LokaliseClient? lokaliseClient;
+    MockWebServer? mockWebServer;
 
     setUp(() async {
       mockWebServer = MockWebServer();
-      await mockWebServer.start();
+      await mockWebServer?.start();
       lokaliseClient = LokaliseClient(
-        baseUrl: mockWebServer.url,
+        baseUrl: mockWebServer?.url,
         apiToken: apiToken,
       );
     });
 
     tearDown(() async {
-      await mockWebServer.shutdown();
+      await mockWebServer?.shutdown();
     });
 
     test("should perform download request and parse response", () async {
       // given
-      mockWebServer.enqueue(
+      mockWebServer!.enqueue(
           body: jsonEncode({
         "project_id": projectId,
         "bundle_url": bundleUrl,
       }));
 
       // when
-      final response = await lokaliseClient.download(
+      final response = await lokaliseClient!.download(
         projectId: projectId,
         includeTags: ["tag"],
       );
 
       // then
-      final request = mockWebServer.takeRequest();
+      final request = mockWebServer!.takeRequest();
       expect(request.method, equalsIgnoringCase("post"));
-      expect(request.uri.toString(), endsWith("/projects/$projectId/files/download"));
+      expect(request.uri.toString(),
+          endsWith("/projects/$projectId/files/download"));
       expect(request.headers, containsPair("x-api-token", apiToken));
-      expect(request.headers, containsPair("content-type", "application/json; charset=utf-8"));
+      expect(request.headers,
+          containsPair("content-type", "application/json; charset=utf-8"));
       expect(
           jsonDecode(request.body),
           equals({
@@ -66,7 +69,7 @@ void main() {
 
     test("should handle error response", () async {
       // given
-      mockWebServer.enqueue(
+      mockWebServer!.enqueue(
         httpCode: 406,
         body: jsonEncode({
           "error": {
@@ -78,7 +81,7 @@ void main() {
       );
 
       // when
-      final response = await lokaliseClient.download(projectId: projectId);
+      final response = await lokaliseClient!.download(projectId: projectId);
 
       // then
       expect(response.wasSuccessful, isFalse);

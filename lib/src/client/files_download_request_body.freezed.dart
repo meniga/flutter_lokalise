@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'files_download_request_body.dart';
 
@@ -8,42 +8,37 @@ part of 'files_download_request_body.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 FilesDownloadRequestBody _$FilesDownloadRequestBodyFromJson(
     Map<String, dynamic> json) {
   return _FilesDownloadRequestBody.fromJson(json);
 }
 
+/// @nodoc
 class _$FilesDownloadRequestBodyTearOff {
   const _$FilesDownloadRequestBodyTearOff();
 
-// ignore: unused_element
   _FilesDownloadRequestBody call(
-      {@required
-          String format,
-      @nullable
-      @JsonKey(name: 'original_filenames')
-          bool originalFilenames = false,
-      @nullable
-      @JsonKey(name: 'all_platforms')
-          bool allPlatforms = true,
-      @nullable
-      @JsonKey(name: 'plural_format')
-          String pluralFormat = 'icu',
-      @nullable
-      @JsonKey(name: 'placeholder_format')
-          String placeholderFormat = 'icu',
-      @nullable
-      @JsonKey(name: 'include_tags')
-          Iterable<String> includeTags,
-      @nullable
-      @JsonKey(name: 'include_comments')
-          bool includeComments = true,
-      @nullable
-      @JsonKey(name: 'include_description')
-          bool includeDescription = true,
-      @nullable
-      @JsonKey(name: 'json_unescaped_slashes')
-          bool jsonUnescapedSlashes = true}) {
+      {required String format,
+      @JsonKey(name: "original_filenames")
+          bool? originalFilenames = false,
+      @JsonKey(name: "all_platforms")
+          bool? allPlatforms = true,
+      @JsonKey(name: "plural_format")
+          String? pluralFormat = "icu",
+      @JsonKey(name: "placeholder_format")
+          String? placeholderFormat = "icu",
+      @JsonKey(name: "include_tags")
+          Iterable<String>? includeTags,
+      @JsonKey(name: "include_comments")
+          bool? includeComments = true,
+      @JsonKey(name: "include_description")
+          bool? includeDescription = true,
+      @JsonKey(name: "json_unescaped_slashes")
+          bool? jsonUnescapedSlashes = true}) {
     return _FilesDownloadRequestBody(
       format: format,
       originalFilenames: originalFilenames,
@@ -56,74 +51,59 @@ class _$FilesDownloadRequestBodyTearOff {
       jsonUnescapedSlashes: jsonUnescapedSlashes,
     );
   }
+
+  FilesDownloadRequestBody fromJson(Map<String, Object> json) {
+    return FilesDownloadRequestBody.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $FilesDownloadRequestBody = _$FilesDownloadRequestBodyTearOff();
 
+/// @nodoc
 mixin _$FilesDownloadRequestBody {
-  String get format;
-  @nullable
-  @JsonKey(name: 'original_filenames')
-  bool get originalFilenames;
-  @nullable
-  @JsonKey(name: 'all_platforms')
-  bool get allPlatforms;
-  @nullable
-  @JsonKey(name: 'plural_format')
-  String get pluralFormat;
-  @nullable
-  @JsonKey(name: 'placeholder_format')
-  String get placeholderFormat;
-  @nullable
-  @JsonKey(name: 'include_tags')
-  Iterable<String> get includeTags;
-  @nullable
-  @JsonKey(name: 'include_comments')
-  bool get includeComments;
-  @nullable
-  @JsonKey(name: 'include_description')
-  bool get includeDescription;
-  @nullable
-  @JsonKey(name: 'json_unescaped_slashes')
-  bool get jsonUnescapedSlashes;
+  String get format => throw _privateConstructorUsedError;
+  @JsonKey(name: "original_filenames")
+  bool? get originalFilenames => throw _privateConstructorUsedError;
+  @JsonKey(name: "all_platforms")
+  bool? get allPlatforms => throw _privateConstructorUsedError;
+  @JsonKey(name: "plural_format")
+  String? get pluralFormat => throw _privateConstructorUsedError;
+  @JsonKey(name: "placeholder_format")
+  String? get placeholderFormat => throw _privateConstructorUsedError;
+  @JsonKey(name: "include_tags")
+  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
+  @JsonKey(name: "include_comments")
+  bool? get includeComments => throw _privateConstructorUsedError;
+  @JsonKey(name: "include_description")
+  bool? get includeDescription => throw _privateConstructorUsedError;
+  @JsonKey(name: "json_unescaped_slashes")
+  bool? get jsonUnescapedSlashes => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $FilesDownloadRequestBodyCopyWith<FilesDownloadRequestBody> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FilesDownloadRequestBodyCopyWith<FilesDownloadRequestBody> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $FilesDownloadRequestBodyCopyWith<$Res> {
   factory $FilesDownloadRequestBodyCopyWith(FilesDownloadRequestBody value,
           $Res Function(FilesDownloadRequestBody) then) =
       _$FilesDownloadRequestBodyCopyWithImpl<$Res>;
   $Res call(
       {String format,
-      @nullable
-      @JsonKey(name: 'original_filenames')
-          bool originalFilenames,
-      @nullable
-      @JsonKey(name: 'all_platforms')
-          bool allPlatforms,
-      @nullable
-      @JsonKey(name: 'plural_format')
-          String pluralFormat,
-      @nullable
-      @JsonKey(name: 'placeholder_format')
-          String placeholderFormat,
-      @nullable
-      @JsonKey(name: 'include_tags')
-          Iterable<String> includeTags,
-      @nullable
-      @JsonKey(name: 'include_comments')
-          bool includeComments,
-      @nullable
-      @JsonKey(name: 'include_description')
-          bool includeDescription,
-      @nullable
-      @JsonKey(name: 'json_unescaped_slashes')
-          bool jsonUnescapedSlashes});
+      @JsonKey(name: "original_filenames") bool? originalFilenames,
+      @JsonKey(name: "all_platforms") bool? allPlatforms,
+      @JsonKey(name: "plural_format") String? pluralFormat,
+      @JsonKey(name: "placeholder_format") String? placeholderFormat,
+      @JsonKey(name: "include_tags") Iterable<String>? includeTags,
+      @JsonKey(name: "include_comments") bool? includeComments,
+      @JsonKey(name: "include_description") bool? includeDescription,
+      @JsonKey(name: "json_unescaped_slashes") bool? jsonUnescapedSlashes});
 }
 
+/// @nodoc
 class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
     implements $FilesDownloadRequestBodyCopyWith<$Res> {
   _$FilesDownloadRequestBodyCopyWithImpl(this._value, this._then);
@@ -134,45 +114,58 @@ class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object format = freezed,
-    Object originalFilenames = freezed,
-    Object allPlatforms = freezed,
-    Object pluralFormat = freezed,
-    Object placeholderFormat = freezed,
-    Object includeTags = freezed,
-    Object includeComments = freezed,
-    Object includeDescription = freezed,
-    Object jsonUnescapedSlashes = freezed,
+    Object? format = freezed,
+    Object? originalFilenames = freezed,
+    Object? allPlatforms = freezed,
+    Object? pluralFormat = freezed,
+    Object? placeholderFormat = freezed,
+    Object? includeTags = freezed,
+    Object? includeComments = freezed,
+    Object? includeDescription = freezed,
+    Object? jsonUnescapedSlashes = freezed,
   }) {
     return _then(_value.copyWith(
-      format: format == freezed ? _value.format : format as String,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
       originalFilenames: originalFilenames == freezed
           ? _value.originalFilenames
-          : originalFilenames as bool,
-      allPlatforms:
-          allPlatforms == freezed ? _value.allPlatforms : allPlatforms as bool,
+          : originalFilenames // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      allPlatforms: allPlatforms == freezed
+          ? _value.allPlatforms
+          : allPlatforms // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pluralFormat: pluralFormat == freezed
           ? _value.pluralFormat
-          : pluralFormat as String,
+          : pluralFormat // ignore: cast_nullable_to_non_nullable
+              as String?,
       placeholderFormat: placeholderFormat == freezed
           ? _value.placeholderFormat
-          : placeholderFormat as String,
+          : placeholderFormat // ignore: cast_nullable_to_non_nullable
+              as String?,
       includeTags: includeTags == freezed
           ? _value.includeTags
-          : includeTags as Iterable<String>,
+          : includeTags // ignore: cast_nullable_to_non_nullable
+              as Iterable<String>?,
       includeComments: includeComments == freezed
           ? _value.includeComments
-          : includeComments as bool,
+          : includeComments // ignore: cast_nullable_to_non_nullable
+              as bool?,
       includeDescription: includeDescription == freezed
           ? _value.includeDescription
-          : includeDescription as bool,
+          : includeDescription // ignore: cast_nullable_to_non_nullable
+              as bool?,
       jsonUnescapedSlashes: jsonUnescapedSlashes == freezed
           ? _value.jsonUnescapedSlashes
-          : jsonUnescapedSlashes as bool,
+          : jsonUnescapedSlashes // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$FilesDownloadRequestBodyCopyWith<$Res>
     implements $FilesDownloadRequestBodyCopyWith<$Res> {
   factory _$FilesDownloadRequestBodyCopyWith(_FilesDownloadRequestBody value,
@@ -181,32 +174,17 @@ abstract class _$FilesDownloadRequestBodyCopyWith<$Res>
   @override
   $Res call(
       {String format,
-      @nullable
-      @JsonKey(name: 'original_filenames')
-          bool originalFilenames,
-      @nullable
-      @JsonKey(name: 'all_platforms')
-          bool allPlatforms,
-      @nullable
-      @JsonKey(name: 'plural_format')
-          String pluralFormat,
-      @nullable
-      @JsonKey(name: 'placeholder_format')
-          String placeholderFormat,
-      @nullable
-      @JsonKey(name: 'include_tags')
-          Iterable<String> includeTags,
-      @nullable
-      @JsonKey(name: 'include_comments')
-          bool includeComments,
-      @nullable
-      @JsonKey(name: 'include_description')
-          bool includeDescription,
-      @nullable
-      @JsonKey(name: 'json_unescaped_slashes')
-          bool jsonUnescapedSlashes});
+      @JsonKey(name: "original_filenames") bool? originalFilenames,
+      @JsonKey(name: "all_platforms") bool? allPlatforms,
+      @JsonKey(name: "plural_format") String? pluralFormat,
+      @JsonKey(name: "placeholder_format") String? placeholderFormat,
+      @JsonKey(name: "include_tags") Iterable<String>? includeTags,
+      @JsonKey(name: "include_comments") bool? includeComments,
+      @JsonKey(name: "include_description") bool? includeDescription,
+      @JsonKey(name: "json_unescaped_slashes") bool? jsonUnescapedSlashes});
 }
 
+/// @nodoc
 class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
     extends _$FilesDownloadRequestBodyCopyWithImpl<$Res>
     implements _$FilesDownloadRequestBodyCopyWith<$Res> {
@@ -220,75 +198,78 @@ class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object format = freezed,
-    Object originalFilenames = freezed,
-    Object allPlatforms = freezed,
-    Object pluralFormat = freezed,
-    Object placeholderFormat = freezed,
-    Object includeTags = freezed,
-    Object includeComments = freezed,
-    Object includeDescription = freezed,
-    Object jsonUnescapedSlashes = freezed,
+    Object? format = freezed,
+    Object? originalFilenames = freezed,
+    Object? allPlatforms = freezed,
+    Object? pluralFormat = freezed,
+    Object? placeholderFormat = freezed,
+    Object? includeTags = freezed,
+    Object? includeComments = freezed,
+    Object? includeDescription = freezed,
+    Object? jsonUnescapedSlashes = freezed,
   }) {
     return _then(_FilesDownloadRequestBody(
-      format: format == freezed ? _value.format : format as String,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
       originalFilenames: originalFilenames == freezed
           ? _value.originalFilenames
-          : originalFilenames as bool,
-      allPlatforms:
-          allPlatforms == freezed ? _value.allPlatforms : allPlatforms as bool,
+          : originalFilenames // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      allPlatforms: allPlatforms == freezed
+          ? _value.allPlatforms
+          : allPlatforms // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pluralFormat: pluralFormat == freezed
           ? _value.pluralFormat
-          : pluralFormat as String,
+          : pluralFormat // ignore: cast_nullable_to_non_nullable
+              as String?,
       placeholderFormat: placeholderFormat == freezed
           ? _value.placeholderFormat
-          : placeholderFormat as String,
+          : placeholderFormat // ignore: cast_nullable_to_non_nullable
+              as String?,
       includeTags: includeTags == freezed
           ? _value.includeTags
-          : includeTags as Iterable<String>,
+          : includeTags // ignore: cast_nullable_to_non_nullable
+              as Iterable<String>?,
       includeComments: includeComments == freezed
           ? _value.includeComments
-          : includeComments as bool,
+          : includeComments // ignore: cast_nullable_to_non_nullable
+              as bool?,
       includeDescription: includeDescription == freezed
           ? _value.includeDescription
-          : includeDescription as bool,
+          : includeDescription // ignore: cast_nullable_to_non_nullable
+              as bool?,
       jsonUnescapedSlashes: jsonUnescapedSlashes == freezed
           ? _value.jsonUnescapedSlashes
-          : jsonUnescapedSlashes as bool,
+          : jsonUnescapedSlashes // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
   _$_FilesDownloadRequestBody(
-      {@required
-          this.format,
-      @nullable
-      @JsonKey(name: 'original_filenames')
+      {required this.format,
+      @JsonKey(name: "original_filenames")
           this.originalFilenames = false,
-      @nullable
-      @JsonKey(name: 'all_platforms')
+      @JsonKey(name: "all_platforms")
           this.allPlatforms = true,
-      @nullable
-      @JsonKey(name: 'plural_format')
-          this.pluralFormat = 'icu',
-      @nullable
-      @JsonKey(name: 'placeholder_format')
-          this.placeholderFormat = 'icu',
-      @nullable
-      @JsonKey(name: 'include_tags')
+      @JsonKey(name: "plural_format")
+          this.pluralFormat = "icu",
+      @JsonKey(name: "placeholder_format")
+          this.placeholderFormat = "icu",
+      @JsonKey(name: "include_tags")
           this.includeTags,
-      @nullable
-      @JsonKey(name: 'include_comments')
+      @JsonKey(name: "include_comments")
           this.includeComments = true,
-      @nullable
-      @JsonKey(name: 'include_description')
+      @JsonKey(name: "include_description")
           this.includeDescription = true,
-      @nullable
-      @JsonKey(name: 'json_unescaped_slashes')
-          this.jsonUnescapedSlashes = true})
-      : assert(format != null);
+      @JsonKey(name: "json_unescaped_slashes")
+          this.jsonUnescapedSlashes = true});
 
   factory _$_FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =>
       _$_$_FilesDownloadRequestBodyFromJson(json);
@@ -296,37 +277,29 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
   @override
   final String format;
   @override
-  @nullable
-  @JsonKey(name: 'original_filenames')
-  final bool originalFilenames;
+  @JsonKey(name: "original_filenames")
+  final bool? originalFilenames;
   @override
-  @nullable
-  @JsonKey(name: 'all_platforms')
-  final bool allPlatforms;
+  @JsonKey(name: "all_platforms")
+  final bool? allPlatforms;
   @override
-  @nullable
-  @JsonKey(name: 'plural_format')
-  final String pluralFormat;
+  @JsonKey(name: "plural_format")
+  final String? pluralFormat;
   @override
-  @nullable
-  @JsonKey(name: 'placeholder_format')
-  final String placeholderFormat;
+  @JsonKey(name: "placeholder_format")
+  final String? placeholderFormat;
   @override
-  @nullable
-  @JsonKey(name: 'include_tags')
-  final Iterable<String> includeTags;
+  @JsonKey(name: "include_tags")
+  final Iterable<String>? includeTags;
   @override
-  @nullable
-  @JsonKey(name: 'include_comments')
-  final bool includeComments;
+  @JsonKey(name: "include_comments")
+  final bool? includeComments;
   @override
-  @nullable
-  @JsonKey(name: 'include_description')
-  final bool includeDescription;
+  @JsonKey(name: "include_description")
+  final bool? includeDescription;
   @override
-  @nullable
-  @JsonKey(name: 'json_unescaped_slashes')
-  final bool jsonUnescapedSlashes;
+  @JsonKey(name: "json_unescaped_slashes")
+  final bool? jsonUnescapedSlashes;
 
   @override
   String toString() {
@@ -378,6 +351,7 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
       const DeepCollectionEquality().hash(includeDescription) ^
       const DeepCollectionEquality().hash(jsonUnescapedSlashes);
 
+  @JsonKey(ignore: true)
   @override
   _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
       __$FilesDownloadRequestBodyCopyWithImpl<_FilesDownloadRequestBody>(
@@ -391,70 +365,55 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
 
 abstract class _FilesDownloadRequestBody implements FilesDownloadRequestBody {
   factory _FilesDownloadRequestBody(
-      {@required
-          String format,
-      @nullable
-      @JsonKey(name: 'original_filenames')
-          bool originalFilenames,
-      @nullable
-      @JsonKey(name: 'all_platforms')
-          bool allPlatforms,
-      @nullable
-      @JsonKey(name: 'plural_format')
-          String pluralFormat,
-      @nullable
-      @JsonKey(name: 'placeholder_format')
-          String placeholderFormat,
-      @nullable
-      @JsonKey(name: 'include_tags')
-          Iterable<String> includeTags,
-      @nullable
-      @JsonKey(name: 'include_comments')
-          bool includeComments,
-      @nullable
-      @JsonKey(name: 'include_description')
-          bool includeDescription,
-      @nullable
-      @JsonKey(name: 'json_unescaped_slashes')
-          bool jsonUnescapedSlashes}) = _$_FilesDownloadRequestBody;
+      {required String format,
+      @JsonKey(name: "original_filenames")
+          bool? originalFilenames,
+      @JsonKey(name: "all_platforms")
+          bool? allPlatforms,
+      @JsonKey(name: "plural_format")
+          String? pluralFormat,
+      @JsonKey(name: "placeholder_format")
+          String? placeholderFormat,
+      @JsonKey(name: "include_tags")
+          Iterable<String>? includeTags,
+      @JsonKey(name: "include_comments")
+          bool? includeComments,
+      @JsonKey(name: "include_description")
+          bool? includeDescription,
+      @JsonKey(name: "json_unescaped_slashes")
+          bool? jsonUnescapedSlashes}) = _$_FilesDownloadRequestBody;
 
   factory _FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =
       _$_FilesDownloadRequestBody.fromJson;
 
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'original_filenames')
-  bool get originalFilenames;
+  @JsonKey(name: "original_filenames")
+  bool? get originalFilenames => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'all_platforms')
-  bool get allPlatforms;
+  @JsonKey(name: "all_platforms")
+  bool? get allPlatforms => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'plural_format')
-  String get pluralFormat;
+  @JsonKey(name: "plural_format")
+  String? get pluralFormat => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'placeholder_format')
-  String get placeholderFormat;
+  @JsonKey(name: "placeholder_format")
+  String? get placeholderFormat => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'include_tags')
-  Iterable<String> get includeTags;
+  @JsonKey(name: "include_tags")
+  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'include_comments')
-  bool get includeComments;
+  @JsonKey(name: "include_comments")
+  bool? get includeComments => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'include_description')
-  bool get includeDescription;
+  @JsonKey(name: "include_description")
+  bool? get includeDescription => throw _privateConstructorUsedError;
   @override
-  @nullable
-  @JsonKey(name: 'json_unescaped_slashes')
-  bool get jsonUnescapedSlashes;
+  @JsonKey(name: "json_unescaped_slashes")
+  bool? get jsonUnescapedSlashes => throw _privateConstructorUsedError;
   @override
-  _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith;
+  @JsonKey(ignore: true)
+  _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
+      throw _privateConstructorUsedError;
 }

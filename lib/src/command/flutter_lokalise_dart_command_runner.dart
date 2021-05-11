@@ -11,12 +11,13 @@ import 'flutter_lokalise_command.dart';
 
 class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   final Logger _logger;
-  FlutterLokaliseArgResults _flutterLokaliseArgResults;
-  LokaliseConfig _lokaliseConfig;
+  FlutterLokaliseArgResults? _flutterLokaliseArgResults;
+  LokaliseConfig? _lokaliseConfig;
 
-  FlutterLokaliseArgResults get flutterLokaliseArgResults => _flutterLokaliseArgResults;
+  FlutterLokaliseArgResults? get flutterLokaliseArgResults =>
+      _flutterLokaliseArgResults;
 
-  LokaliseConfig get lokaliseConfig => _lokaliseConfig;
+  LokaliseConfig get lokaliseConfig => _lokaliseConfig!;
 
   FlutterLokaliseCommandRunner.withDefaultCommands()
       : this(commands: [
@@ -24,8 +25,8 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
         ]);
 
   FlutterLokaliseCommandRunner({
-    List<Command<Null>> commands,
-    Logger logger,
+    required List<Command<Null>> commands,
+    Logger? logger,
   })  : _logger = logger ?? Logger.root,
         super(
           "flutter_lokalise",
@@ -36,21 +37,21 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   }
 
   @override
-  FutureOr<Null> runCommand(ArgResults topLevelResults) {
+  Future<Null?> runCommand(ArgResults topLevelResults) {
     final workingDirectory = _determineWorkingDirectory(topLevelResults);
     _lokaliseConfig = LokaliseConfig.fromPubspecYamlString(
         File("$workingDirectory/pubspec.yaml").readAsStringSync());
     _flutterLokaliseArgResults = FlutterLokaliseArgResults.fromArgResults(
       topLevelResults,
-      fallbackApiToken: _lokaliseConfig.apiToken,
-      fallbackProjectId: _lokaliseConfig.projectId,
+      fallbackApiToken: _lokaliseConfig!.apiToken,
+      fallbackProjectId: _lokaliseConfig!.projectId,
     );
-    _configureLogger(_flutterLokaliseArgResults);
+    _configureLogger(_flutterLokaliseArgResults!);
     return super.runCommand(topLevelResults);
   }
 
   void _configureLogger(FlutterLokaliseArgResults results) {
-    _logger.level = results.verbose ? Level.ALL : Level.WARNING;
+    _logger.level = results.verbose == true ? Level.ALL : Level.WARNING;
     _logger.onRecord.listen((LogRecord logRecord) {
       if (logRecord.level >= Level.SEVERE) {
         stderr.writeln(logRecord);
@@ -61,5 +62,6 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   }
 
   String _determineWorkingDirectory(ArgResults results) =>
-      FlutterLokaliseArgResults.fromArgResults(results).workingDirectory ?? Directory.current.path;
+      FlutterLokaliseArgResults.fromArgResults(results).workingDirectory ??
+      Directory.current.path;
 }
