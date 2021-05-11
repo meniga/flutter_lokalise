@@ -15,10 +15,10 @@ class JsonToArbConverter {
   }
 }
 
-extension _MapExtension on Map<String, dynamic> {
-  void addFlattenedEntry(MapEntry<String, dynamic> entry) {
+extension _MapExtension<K, V> on Map<K, V> {
+  void addFlattenedEntry(MapEntry<K, V> entry) {
     final value = entry.value;
-    if (value is Map<String, dynamic>) {
+    if (value is Map<K, V>) {
       value.entries.forEach((it) => addFlattenedEntry(it));
     } else {
       this[entry.key] = entry.value;
