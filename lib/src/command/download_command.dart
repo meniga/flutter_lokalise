@@ -76,7 +76,7 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
         .forEach((it) {
       final data = it.content as List<int>;
       final jsonString = Utf8Decoder().convert(data);
-      final json = jsonDecode(jsonString) as Map<String, Object>;
+      final json = jsonDecode(jsonString) as Map<String, dynamic>;
       final locale = path.basenameWithoutExtension(it.name);
       final arbMap = converter.toArb(
         json: json,

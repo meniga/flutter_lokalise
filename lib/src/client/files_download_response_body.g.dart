@@ -9,7 +9,7 @@ part of 'files_download_response_body.dart';
 _$_FilesDownloadResponseBody _$_$_FilesDownloadResponseBodyFromJson(
     Map<String, dynamic> json) {
   return _$_FilesDownloadResponseBody(
-    projectId: json['project_id'] as String,
+    projectId: json['project_id'] as String?,
     bundleUrl: json['bundle_url'] as String,
   );
 }

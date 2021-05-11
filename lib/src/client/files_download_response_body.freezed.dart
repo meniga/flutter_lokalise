@@ -22,7 +22,7 @@ class _$FilesDownloadResponseBodyTearOff {
   const _$FilesDownloadResponseBodyTearOff();
 
   _FilesDownloadResponseBody call(
-      {@JsonKey(name: "project_id") required String projectId,
+      {@JsonKey(name: "project_id") String? projectId,
       @JsonKey(name: "bundle_url") required String bundleUrl}) {
     return _FilesDownloadResponseBody(
       projectId: projectId,
@@ -41,7 +41,7 @@ const $FilesDownloadResponseBody = _$FilesDownloadResponseBodyTearOff();
 /// @nodoc
 mixin _$FilesDownloadResponseBody {
   @JsonKey(name: "project_id")
-  String get projectId => throw _privateConstructorUsedError;
+  String? get projectId => throw _privateConstructorUsedError;
   @JsonKey(name: "bundle_url")
   String get bundleUrl => throw _privateConstructorUsedError;
 
@@ -57,7 +57,7 @@ abstract class $FilesDownloadResponseBodyCopyWith<$Res> {
           $Res Function(FilesDownloadResponseBody) then) =
       _$FilesDownloadResponseBodyCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "project_id") String projectId,
+      {@JsonKey(name: "project_id") String? projectId,
       @JsonKey(name: "bundle_url") String bundleUrl});
 }
 
@@ -79,7 +79,7 @@ class _$FilesDownloadResponseBodyCopyWithImpl<$Res>
       projectId: projectId == freezed
           ? _value.projectId
           : projectId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       bundleUrl: bundleUrl == freezed
           ? _value.bundleUrl
           : bundleUrl // ignore: cast_nullable_to_non_nullable
@@ -96,7 +96,7 @@ abstract class _$FilesDownloadResponseBodyCopyWith<$Res>
       __$FilesDownloadResponseBodyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "project_id") String projectId,
+      {@JsonKey(name: "project_id") String? projectId,
       @JsonKey(name: "bundle_url") String bundleUrl});
 }
 
@@ -121,7 +121,7 @@ class __$FilesDownloadResponseBodyCopyWithImpl<$Res>
       projectId: projectId == freezed
           ? _value.projectId
           : projectId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       bundleUrl: bundleUrl == freezed
           ? _value.bundleUrl
           : bundleUrl // ignore: cast_nullable_to_non_nullable
@@ -134,7 +134,7 @@ class __$FilesDownloadResponseBodyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FilesDownloadResponseBody implements _FilesDownloadResponseBody {
   _$_FilesDownloadResponseBody(
-      {@JsonKey(name: "project_id") required this.projectId,
+      {@JsonKey(name: "project_id") this.projectId,
       @JsonKey(name: "bundle_url") required this.bundleUrl});
 
   factory _$_FilesDownloadResponseBody.fromJson(Map<String, dynamic> json) =>
@@ -142,7 +142,7 @@ class _$_FilesDownloadResponseBody implements _FilesDownloadResponseBody {
 
   @override
   @JsonKey(name: "project_id")
-  final String projectId;
+  final String? projectId;
   @override
   @JsonKey(name: "bundle_url")
   final String bundleUrl;
@@ -185,7 +185,7 @@ class _$_FilesDownloadResponseBody implements _FilesDownloadResponseBody {
 
 abstract class _FilesDownloadResponseBody implements FilesDownloadResponseBody {
   factory _FilesDownloadResponseBody(
-          {@JsonKey(name: "project_id") required String projectId,
+          {@JsonKey(name: "project_id") String? projectId,
           @JsonKey(name: "bundle_url") required String bundleUrl}) =
       _$_FilesDownloadResponseBody;
 
@@ -194,7 +194,7 @@ abstract class _FilesDownloadResponseBody implements FilesDownloadResponseBody {
 
   @override
   @JsonKey(name: "project_id")
-  String get projectId => throw _privateConstructorUsedError;
+  String? get projectId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "bundle_url")
   String get bundleUrl => throw _privateConstructorUsedError;

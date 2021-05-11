@@ -7,7 +7,7 @@ part 'files_download_response_body.g.dart';
 @freezed
 class FilesDownloadResponseBody with _$FilesDownloadResponseBody {
   factory FilesDownloadResponseBody({
-    @JsonKey(name: "project_id") required String projectId,
+    @JsonKey(name: "project_id") String? projectId,
     @JsonKey(name: "bundle_url") required String bundleUrl,
   }) = _FilesDownloadResponseBody;
 

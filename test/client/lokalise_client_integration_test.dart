@@ -50,7 +50,7 @@ void main() {
       expect(request.headers,
           containsPair("content-type", "application/json; charset=utf-8"));
       expect(
-          jsonDecode(request.body),
+          jsonDecode(request.body!),
           equals({
             "format": "json",
             "original_filenames": false,

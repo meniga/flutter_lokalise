@@ -27,7 +27,7 @@ dev_dependencies:
   json_serializable: ^4.1.1
   freezed: ^0.14.1
   matcher: ^0.12.10
-  mock_web_server: ^4.1.1
+  mock_web_server: ^5.0.0-nullsafety.1
   mockito: ^5.0.7
   pedantic: ^1.11.0
   remove_from_coverage: ^2.0.0
