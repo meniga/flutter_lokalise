@@ -4,7 +4,7 @@ part 'files_download_request_body.freezed.dart';
 part 'files_download_request_body.g.dart';
 
 @freezed
-abstract class FilesDownloadRequestBody implements _$FilesDownloadRequestBody {
+class FilesDownloadRequestBody with _$FilesDownloadRequestBody {
   factory FilesDownloadRequestBody({
     required String format,
     @JsonKey(name: "original_filenames")
