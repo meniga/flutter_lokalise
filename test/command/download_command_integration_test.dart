@@ -89,7 +89,7 @@ void main() {
                 "newline": r"\nvalue",
                 "quote": r"\\\'",
               },
-            ),
+            ).replaceAll(r'\\n', r'\n'),
           ),
         ),
       );
