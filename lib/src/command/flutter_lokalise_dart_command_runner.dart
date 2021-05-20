@@ -9,7 +9,7 @@ import 'package:logging/logging.dart';
 import 'download_command.dart';
 import 'flutter_lokalise_command.dart';
 
-class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
+class FlutterLokaliseCommandRunner extends CommandRunner<void> {
   final Logger _logger;
   FlutterLokaliseArgResults? _flutterLokaliseArgResults;
   LokaliseConfig? _lokaliseConfig;
@@ -25,7 +25,7 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
         ]);
 
   FlutterLokaliseCommandRunner({
-    required List<Command<Null>> commands,
+    required List<Command<void>> commands,
     Logger? logger,
   })  : _logger = logger ?? Logger.root,
         super(
@@ -37,7 +37,7 @@ class FlutterLokaliseCommandRunner extends CommandRunner<Null> {
   }
 
   @override
-  Future<Null?> runCommand(ArgResults topLevelResults) {
+  Future<void> runCommand(ArgResults topLevelResults) {
     final workingDirectory = _determineWorkingDirectory(topLevelResults);
     _lokaliseConfig = LokaliseConfig.fromPubspecYamlString(
         File("$workingDirectory/pubspec.yaml").readAsStringSync());

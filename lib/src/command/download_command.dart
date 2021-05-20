@@ -84,8 +84,13 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
       );
       File("$output/intl_$locale.arb")
         ..createSync(recursive: true)
-        ..writeAsStringSync(JsonEncoder.withIndent("  ").convert(arbMap));
+        ..writeAsStringSync(
+            _unescape(JsonEncoder.withIndent("  ").convert(arbMap)));
     });
+  }
+
+  String _unescape(String input) {
+    return input.replaceAll(r'\\n', r'\n');
   }
 }
 
