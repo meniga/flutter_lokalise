@@ -477,15 +477,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.24"
-  test_coverage:
-    dependency: "direct dev"
-    description:
-      path: "."
-      ref: null-safety-migration
-      resolved-ref: aa6ffb41c28d7dec4e3bb11c3b7c4729e8271a69
-      url: "https://github.com/civts/test-coverage.git"
-    source: git
-    version: "0.6.0"
   timing:
     dependency: transitive
     description:
