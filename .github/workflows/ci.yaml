@@ -43,6 +43,7 @@ jobs:
       - name: test
         run: |
           flutter test --coverage
+          flutter pub run remove_from_coverage -f coverage/lcov.info -r ".g.dart$" -r ".freezed.dart$"
 
       - name: publish (dry-run)
         run: |
