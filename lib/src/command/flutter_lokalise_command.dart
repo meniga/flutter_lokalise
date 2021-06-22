@@ -5,23 +5,24 @@ import 'package:flutter_lokalise/src/command/flutter_lokalise_dart_command_runne
 import 'arg_results_extension.dart';
 
 abstract class FlutterLokaliseCommand<T> extends Command<T> {
-  FlutterLokaliseCommandRunner get commandRunner => (runner as FlutterLokaliseCommandRunner);
+  FlutterLokaliseCommandRunner get commandRunner =>
+      (runner as FlutterLokaliseCommandRunner);
 }
 
 class FlutterLokaliseArgResults {
-  final String workingDirectory;
-  final String cacheDirectory;
-  final bool verbose;
-  final String apiToken;
-  final String projectId;
+  final String? workingDirectory;
+  final String? cacheDirectory;
+  final bool? verbose;
+  final String? apiToken;
+  final String? projectId;
 
   FlutterLokaliseArgResults.fromArgResults(
     ArgResults results, {
-    String fallbackApiToken,
-    String fallbackProjectId,
-  })  : workingDirectory = results.get("working-directory"),
-        cacheDirectory = results.get("cache-directory"),
-        verbose = results.get("verbose"),
+    String? fallbackApiToken,
+    String? fallbackProjectId,
+  })  : workingDirectory = results.getNullable("working-directory"),
+        cacheDirectory = results.getNullable("cache-directory"),
+        verbose = results.getNullable("verbose"),
         apiToken = results.get("api-token", orElse: fallbackApiToken),
         projectId = results.get("project-id", orElse: fallbackProjectId);
 

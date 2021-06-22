@@ -14,15 +14,15 @@ import '../trimmer.dart';
 void main() {
   group("download command", () {
     final tempPath = Directory.systemTemp.createTempSync().path;
-    MockWebServer mockWebServer;
+    MockWebServer? mockWebServer;
 
     setUp(() async {
       mockWebServer = MockWebServer();
-      await mockWebServer.start();
+      await mockWebServer?.start();
     });
 
     tearDown(() async {
-      await mockWebServer.shutdown();
+      await mockWebServer?.shutdown();
     });
 
     test("should download and convert json to arb file", () async {
@@ -43,7 +43,7 @@ void main() {
         )
         ..close();
 
-      mockWebServer.enqueue(
+      mockWebServer!.enqueue(
         body: jsonEncode(
           {
             "bundle_url": bundleZipPath,
@@ -53,7 +53,7 @@ void main() {
 
       final downloadCommand = DownloadCommand(
         downloader: LocalDownloader(),
-        baseUrl: mockWebServer.url,
+        baseUrl: mockWebServer!.url,
       );
       final logRecords = <LogRecord>[];
       final logger = Logger.root..onRecord.listen(logRecords.add);
@@ -89,7 +89,7 @@ void main() {
                 "newline": r"\nvalue",
                 "quote": r"\\\'",
               },
-            ),
+            ).replaceAll(r'\\n', r'\n'),
           ),
         ),
       );

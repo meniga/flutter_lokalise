@@ -1,3 +1,8 @@
+## 1.0.0
+
+* Upgrade to nullability
+* Unescape newline characters #11
+
 ## 0.1.4
 
 * Remove unescaping from download command #10

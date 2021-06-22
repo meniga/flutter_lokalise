@@ -10,14 +10,15 @@ _$_FilesDownloadRequestBody _$_$_FilesDownloadRequestBodyFromJson(
     Map<String, dynamic> json) {
   return _$_FilesDownloadRequestBody(
     format: json['format'] as String,
-    originalFilenames: json['original_filenames'] as bool,
-    allPlatforms: json['all_platforms'] as bool,
-    pluralFormat: json['plural_format'] as String,
-    placeholderFormat: json['placeholder_format'] as String,
-    includeTags: (json['include_tags'] as List)?.map((e) => e as String),
-    includeComments: json['include_comments'] as bool,
-    includeDescription: json['include_description'] as bool,
-    jsonUnescapedSlashes: json['json_unescaped_slashes'] as bool,
+    originalFilenames: json['original_filenames'] as bool?,
+    allPlatforms: json['all_platforms'] as bool?,
+    pluralFormat: json['plural_format'] as String?,
+    placeholderFormat: json['placeholder_format'] as String?,
+    includeTags:
+        (json['include_tags'] as List<dynamic>?)?.map((e) => e as String),
+    includeComments: json['include_comments'] as bool?,
+    includeDescription: json['include_description'] as bool?,
+    jsonUnescapedSlashes: json['json_unescaped_slashes'] as bool?,
   );
 }
 

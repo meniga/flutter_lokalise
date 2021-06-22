@@ -26,7 +26,7 @@ void main() {
 
       // when
       final actual = converter.toArb(
-        json: jsonDecode(jsonString) as Map<String, Object>,
+        json: (jsonDecode(jsonString) as Map<String, dynamic>).cast(),
         locale: "en",
       );
 

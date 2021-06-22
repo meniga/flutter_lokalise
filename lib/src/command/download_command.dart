@@ -8,7 +8,6 @@ import 'package:flutter_lokalise/src/arb_converter/json_to_arb_converter.dart';
 import 'package:flutter_lokalise/src/client/downloader.dart';
 import 'package:flutter_lokalise/src/client/lokalise_client.dart';
 import 'package:logging/logging.dart';
-import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
 
 import 'arg_results_extension.dart';
@@ -17,7 +16,7 @@ import 'flutter_lokalise_command.dart';
 class DownloadCommand extends FlutterLokaliseCommand<Null> {
   final Logger _logger = Logger.root;
   final Downloader _downloader;
-  final String _baseUrl;
+  final String? _baseUrl;
 
   @override
   String get description => "Downloads translation files from Lokalise.";
@@ -26,8 +25,8 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
   String get name => "download";
 
   DownloadCommand({
-    Downloader downloader,
-    String baseUrl,
+    Downloader? downloader,
+    String? baseUrl,
   })  : _downloader = downloader ?? Downloader(),
         _baseUrl = baseUrl {
     _DownloadArgResults.addOptions(argParser);
@@ -38,26 +37,26 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
     final config = commandRunner.lokaliseConfig;
     final flutterLokaliseArgResults = commandRunner.flutterLokaliseArgResults;
     final downloadArgResults = _DownloadArgResults.fromArgResults(
-      argResults,
+      argResults!,
       fallbackOutput: config.output,
       fallbackIncludeTags: config.includeTags,
     );
 
     final bundleUrl = await _fetchBundleUrl(
-      apiToken: flutterLokaliseArgResults.apiToken,
-      projectId: flutterLokaliseArgResults.projectId,
-      includeTags: downloadArgResults.includeTags,
+      apiToken: flutterLokaliseArgResults!.apiToken!,
+      projectId: flutterLokaliseArgResults.projectId!,
+      includeTags: downloadArgResults.includeTags!,
     );
 
     final bundleData = await _downloader.download(bundleUrl);
     final archive = ZipDecoder().decodeBytes(bundleData);
-    _convertArchiveToArbFiles(archive, downloadArgResults.output);
+    _convertArchiveToArbFiles(archive, downloadArgResults.output!);
   }
 
   Future<String> _fetchBundleUrl({
-    @required String apiToken,
-    @required String projectId,
-    @required Iterable<String> includeTags,
+    required String apiToken,
+    required String projectId,
+    required Iterable<String> includeTags,
   }) async {
     final response = await LokaliseClient(
       apiToken: apiToken,
@@ -72,7 +71,9 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
 
   void _convertArchiveToArbFiles(Archive archive, String output) {
     final converter = JsonToArbConverter();
-    archive.where((it) => it.isFile && path.extension(it.name) == ".json").forEach((it) {
+    archive
+        .where((it) => it.isFile && path.extension(it.name) == ".json")
+        .forEach((it) {
       final data = it.content as List<int>;
       final jsonString = Utf8Decoder().convert(data);
       final json = jsonDecode(jsonString) as Map<String, dynamic>;
@@ -83,19 +84,24 @@ class DownloadCommand extends FlutterLokaliseCommand<Null> {
       );
       File("$output/intl_$locale.arb")
         ..createSync(recursive: true)
-        ..writeAsStringSync(JsonEncoder.withIndent("  ").convert(arbMap));
+        ..writeAsStringSync(
+            _unescape(JsonEncoder.withIndent("  ").convert(arbMap)));
     });
+  }
+
+  String _unescape(String input) {
+    return input.replaceAll(r'\\n', r'\n');
   }
 }
 
 class _DownloadArgResults {
-  final String output;
-  final Iterable<String> includeTags;
+  final String? output;
+  final Iterable<String>? includeTags;
 
   _DownloadArgResults.fromArgResults(
     ArgResults results, {
-    String fallbackOutput,
-    Iterable<String> fallbackIncludeTags,
+    String? fallbackOutput,
+    Iterable<String>? fallbackIncludeTags,
   })  : output = results.get("output", orElse: fallbackOutput),
         includeTags = results.get("include-tags", orElse: fallbackIncludeTags);
 

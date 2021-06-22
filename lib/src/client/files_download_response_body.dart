@@ -5,10 +5,10 @@ part 'files_download_response_body.freezed.dart';
 part 'files_download_response_body.g.dart';
 
 @freezed
-abstract class FilesDownloadResponseBody implements _$FilesDownloadResponseBody {
+class FilesDownloadResponseBody with _$FilesDownloadResponseBody {
   factory FilesDownloadResponseBody({
-    @JsonKey(name: "project_id") String projectId,
-    @JsonKey(name: "bundle_url") String bundleUrl,
+    @JsonKey(name: "project_id") String? projectId,
+    @JsonKey(name: "bundle_url") required String bundleUrl,
   }) = _FilesDownloadResponseBody;
 
   factory FilesDownloadResponseBody.fromJson(Map<String, dynamic> json) =>
