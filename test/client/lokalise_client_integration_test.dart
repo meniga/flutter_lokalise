@@ -60,6 +60,7 @@ void main() {
             "include_comments": true,
             "include_description": true,
             "include_tags": ["tag"],
+            "export_empty_as": "base",
             "json_unescaped_slashes": true,
           }));
       final body = response.typedBody;
