@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'files_download_request_body.dart';
 
@@ -52,7 +53,7 @@ class _$FilesDownloadRequestBodyTearOff {
     );
   }
 
-  FilesDownloadRequestBody fromJson(Map<String, Object> json) {
+  FilesDownloadRequestBody fromJson(Map<String, Object?> json) {
     return FilesDownloadRequestBody.fromJson(json);
   }
 }
@@ -272,7 +273,7 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
           this.jsonUnescapedSlashes = true});
 
   factory _$_FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =>
-      _$_$_FilesDownloadRequestBodyFromJson(json);
+      _$$_FilesDownloadRequestBodyFromJson(json);
 
   @override
   final String format;
@@ -309,47 +310,39 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FilesDownloadRequestBody &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FilesDownloadRequestBody &&
+            (identical(other.format, format) || other.format == format) &&
             (identical(other.originalFilenames, originalFilenames) ||
-                const DeepCollectionEquality()
-                    .equals(other.originalFilenames, originalFilenames)) &&
+                other.originalFilenames == originalFilenames) &&
             (identical(other.allPlatforms, allPlatforms) ||
-                const DeepCollectionEquality()
-                    .equals(other.allPlatforms, allPlatforms)) &&
+                other.allPlatforms == allPlatforms) &&
             (identical(other.pluralFormat, pluralFormat) ||
-                const DeepCollectionEquality()
-                    .equals(other.pluralFormat, pluralFormat)) &&
+                other.pluralFormat == pluralFormat) &&
             (identical(other.placeholderFormat, placeholderFormat) ||
-                const DeepCollectionEquality()
-                    .equals(other.placeholderFormat, placeholderFormat)) &&
-            (identical(other.includeTags, includeTags) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeTags, includeTags)) &&
+                other.placeholderFormat == placeholderFormat) &&
+            const DeepCollectionEquality()
+                .equals(other.includeTags, includeTags) &&
             (identical(other.includeComments, includeComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeComments, includeComments)) &&
+                other.includeComments == includeComments) &&
             (identical(other.includeDescription, includeDescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeDescription, includeDescription)) &&
+                other.includeDescription == includeDescription) &&
             (identical(other.jsonUnescapedSlashes, jsonUnescapedSlashes) ||
-                const DeepCollectionEquality()
-                    .equals(other.jsonUnescapedSlashes, jsonUnescapedSlashes)));
+                other.jsonUnescapedSlashes == jsonUnescapedSlashes));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(originalFilenames) ^
-      const DeepCollectionEquality().hash(allPlatforms) ^
-      const DeepCollectionEquality().hash(pluralFormat) ^
-      const DeepCollectionEquality().hash(placeholderFormat) ^
-      const DeepCollectionEquality().hash(includeTags) ^
-      const DeepCollectionEquality().hash(includeComments) ^
-      const DeepCollectionEquality().hash(includeDescription) ^
-      const DeepCollectionEquality().hash(jsonUnescapedSlashes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      format,
+      originalFilenames,
+      allPlatforms,
+      pluralFormat,
+      placeholderFormat,
+      const DeepCollectionEquality().hash(includeTags),
+      includeComments,
+      includeDescription,
+      jsonUnescapedSlashes);
 
   @JsonKey(ignore: true)
   @override
@@ -359,7 +352,7 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FilesDownloadRequestBodyToJson(this);
+    return _$$_FilesDownloadRequestBodyToJson(this);
   }
 }
 
@@ -387,31 +380,31 @@ abstract class _FilesDownloadRequestBody implements FilesDownloadRequestBody {
       _$_FilesDownloadRequestBody.fromJson;
 
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
   @JsonKey(name: "original_filenames")
-  bool? get originalFilenames => throw _privateConstructorUsedError;
+  bool? get originalFilenames;
   @override
   @JsonKey(name: "all_platforms")
-  bool? get allPlatforms => throw _privateConstructorUsedError;
+  bool? get allPlatforms;
   @override
   @JsonKey(name: "plural_format")
-  String? get pluralFormat => throw _privateConstructorUsedError;
+  String? get pluralFormat;
   @override
   @JsonKey(name: "placeholder_format")
-  String? get placeholderFormat => throw _privateConstructorUsedError;
+  String? get placeholderFormat;
   @override
   @JsonKey(name: "include_tags")
-  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
+  Iterable<String>? get includeTags;
   @override
   @JsonKey(name: "include_comments")
-  bool? get includeComments => throw _privateConstructorUsedError;
+  bool? get includeComments;
   @override
   @JsonKey(name: "include_description")
-  bool? get includeDescription => throw _privateConstructorUsedError;
+  bool? get includeDescription;
   @override
   @JsonKey(name: "json_unescaped_slashes")
-  bool? get jsonUnescapedSlashes => throw _privateConstructorUsedError;
+  bool? get jsonUnescapedSlashes;
   @override
   @JsonKey(ignore: true)
   _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
