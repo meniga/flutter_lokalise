@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'lokalise_config.dart';
 
@@ -170,27 +171,20 @@ class _$_LokaliseConfig implements _LokaliseConfig {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LokaliseConfig &&
+        (other.runtimeType == runtimeType &&
+            other is _LokaliseConfig &&
             (identical(other.projectId, projectId) ||
-                const DeepCollectionEquality()
-                    .equals(other.projectId, projectId)) &&
+                other.projectId == projectId) &&
             (identical(other.apiToken, apiToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.apiToken, apiToken)) &&
-            (identical(other.includeTags, includeTags) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeTags, includeTags)) &&
-            (identical(other.output, output) ||
-                const DeepCollectionEquality().equals(other.output, output)));
+                other.apiToken == apiToken) &&
+            const DeepCollectionEquality()
+                .equals(other.includeTags, includeTags) &&
+            (identical(other.output, output) || other.output == output));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(projectId) ^
-      const DeepCollectionEquality().hash(apiToken) ^
-      const DeepCollectionEquality().hash(includeTags) ^
-      const DeepCollectionEquality().hash(output);
+  int get hashCode => Object.hash(runtimeType, projectId, apiToken,
+      const DeepCollectionEquality().hash(includeTags), output);
 
   @JsonKey(ignore: true)
   @override
@@ -206,13 +200,13 @@ abstract class _LokaliseConfig implements LokaliseConfig {
       String? output}) = _$_LokaliseConfig;
 
   @override
-  String? get projectId => throw _privateConstructorUsedError;
+  String? get projectId;
   @override
-  String? get apiToken => throw _privateConstructorUsedError;
+  String? get apiToken;
   @override
-  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
+  Iterable<String>? get includeTags;
   @override
-  String? get output => throw _privateConstructorUsedError;
+  String? get output;
   @override
   @JsonKey(ignore: true)
   _$LokaliseConfigCopyWith<_LokaliseConfig> get copyWith =>

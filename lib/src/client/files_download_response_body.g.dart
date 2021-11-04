@@ -6,15 +6,14 @@ part of 'files_download_response_body.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FilesDownloadResponseBody _$_$_FilesDownloadResponseBodyFromJson(
-    Map<String, dynamic> json) {
-  return _$_FilesDownloadResponseBody(
-    projectId: json['project_id'] as String?,
-    bundleUrl: json['bundle_url'] as String,
-  );
-}
+_$_FilesDownloadResponseBody _$$_FilesDownloadResponseBodyFromJson(
+        Map<String, dynamic> json) =>
+    _$_FilesDownloadResponseBody(
+      projectId: json['project_id'] as String?,
+      bundleUrl: json['bundle_url'] as String,
+    );
 
-Map<String, dynamic> _$_$_FilesDownloadResponseBodyToJson(
+Map<String, dynamic> _$$_FilesDownloadResponseBodyToJson(
         _$_FilesDownloadResponseBody instance) =>
     <String, dynamic>{
       'project_id': instance.projectId,
