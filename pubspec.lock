@@ -77,7 +77,11 @@ packages:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.4"
+=======
+    version: "2.1.5"
+>>>>>>> master
   build_runner_core:
     dependency: transitive
     description:
@@ -182,14 +186,22 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.15.0+1"
+=======
+    version: "1.0.0"
+>>>>>>> master
   freezed_annotation:
     dependency: "direct main"
     description:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.15.0"
+=======
+    version: "1.0.0"
+>>>>>>> master
   frontend_server_client:
     dependency: transitive
     description:
@@ -469,21 +481,33 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.19.3"
+=======
+    version: "1.19.4"
+>>>>>>> master
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.4.7"
+=======
+    version: "0.4.8"
+>>>>>>> master
   test_core:
     dependency: transitive
     description:
       name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.4.8"
+=======
+    version: "0.4.9"
+>>>>>>> master
   timing:
     dependency: transitive
     description:
