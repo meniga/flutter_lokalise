@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'files_download_request_body.dart';
@@ -11,55 +12,12 @@ part of 'files_download_request_body.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FilesDownloadRequestBody _$FilesDownloadRequestBodyFromJson(
     Map<String, dynamic> json) {
   return _FilesDownloadRequestBody.fromJson(json);
 }
-
-/// @nodoc
-class _$FilesDownloadRequestBodyTearOff {
-  const _$FilesDownloadRequestBodyTearOff();
-
-  _FilesDownloadRequestBody call(
-      {required String format,
-      @JsonKey(name: "original_filenames")
-          bool? originalFilenames = false,
-      @JsonKey(name: "all_platforms")
-          bool? allPlatforms = true,
-      @JsonKey(name: "plural_format")
-          String? pluralFormat = "icu",
-      @JsonKey(name: "placeholder_format")
-          String? placeholderFormat = "icu",
-      @JsonKey(name: "include_tags")
-          Iterable<String>? includeTags,
-      @JsonKey(name: "include_comments")
-          bool? includeComments = true,
-      @JsonKey(name: "include_description")
-          bool? includeDescription = true,
-      @JsonKey(name: "json_unescaped_slashes")
-          bool? jsonUnescapedSlashes = true}) {
-    return _FilesDownloadRequestBody(
-      format: format,
-      originalFilenames: originalFilenames,
-      allPlatforms: allPlatforms,
-      pluralFormat: pluralFormat,
-      placeholderFormat: placeholderFormat,
-      includeTags: includeTags,
-      includeComments: includeComments,
-      includeDescription: includeDescription,
-      jsonUnescapedSlashes: jsonUnescapedSlashes,
-    );
-  }
-
-  FilesDownloadRequestBody fromJson(Map<String, Object?> json) {
-    return FilesDownloadRequestBody.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FilesDownloadRequestBody = _$FilesDownloadRequestBodyTearOff();
 
 /// @nodoc
 mixin _$FilesDownloadRequestBody {
@@ -167,11 +125,12 @@ class _$FilesDownloadRequestBodyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FilesDownloadRequestBodyCopyWith<$Res>
+abstract class _$$_FilesDownloadRequestBodyCopyWith<$Res>
     implements $FilesDownloadRequestBodyCopyWith<$Res> {
-  factory _$FilesDownloadRequestBodyCopyWith(_FilesDownloadRequestBody value,
-          $Res Function(_FilesDownloadRequestBody) then) =
-      __$FilesDownloadRequestBodyCopyWithImpl<$Res>;
+  factory _$$_FilesDownloadRequestBodyCopyWith(
+          _$_FilesDownloadRequestBody value,
+          $Res Function(_$_FilesDownloadRequestBody) then) =
+      __$$_FilesDownloadRequestBodyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String format,
@@ -186,16 +145,16 @@ abstract class _$FilesDownloadRequestBodyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
+class __$$_FilesDownloadRequestBodyCopyWithImpl<$Res>
     extends _$FilesDownloadRequestBodyCopyWithImpl<$Res>
-    implements _$FilesDownloadRequestBodyCopyWith<$Res> {
-  __$FilesDownloadRequestBodyCopyWithImpl(_FilesDownloadRequestBody _value,
-      $Res Function(_FilesDownloadRequestBody) _then)
-      : super(_value, (v) => _then(v as _FilesDownloadRequestBody));
+    implements _$$_FilesDownloadRequestBodyCopyWith<$Res> {
+  __$$_FilesDownloadRequestBodyCopyWithImpl(_$_FilesDownloadRequestBody _value,
+      $Res Function(_$_FilesDownloadRequestBody) _then)
+      : super(_value, (v) => _then(v as _$_FilesDownloadRequestBody));
 
   @override
-  _FilesDownloadRequestBody get _value =>
-      super._value as _FilesDownloadRequestBody;
+  _$_FilesDownloadRequestBody get _value =>
+      super._value as _$_FilesDownloadRequestBody;
 
   @override
   $Res call({
@@ -209,7 +168,7 @@ class __$FilesDownloadRequestBodyCopyWithImpl<$Res>
     Object? includeDescription = freezed,
     Object? jsonUnescapedSlashes = freezed,
   }) {
-    return _then(_FilesDownloadRequestBody(
+    return _then(_$_FilesDownloadRequestBody(
       format: format == freezed
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
@@ -311,44 +270,45 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FilesDownloadRequestBody &&
-            (identical(other.format, format) || other.format == format) &&
-            (identical(other.originalFilenames, originalFilenames) ||
-                other.originalFilenames == originalFilenames) &&
-            (identical(other.allPlatforms, allPlatforms) ||
-                other.allPlatforms == allPlatforms) &&
-            (identical(other.pluralFormat, pluralFormat) ||
-                other.pluralFormat == pluralFormat) &&
-            (identical(other.placeholderFormat, placeholderFormat) ||
-                other.placeholderFormat == placeholderFormat) &&
+            other is _$_FilesDownloadRequestBody &&
+            const DeepCollectionEquality().equals(other.format, format) &&
+            const DeepCollectionEquality()
+                .equals(other.originalFilenames, originalFilenames) &&
+            const DeepCollectionEquality()
+                .equals(other.allPlatforms, allPlatforms) &&
+            const DeepCollectionEquality()
+                .equals(other.pluralFormat, pluralFormat) &&
+            const DeepCollectionEquality()
+                .equals(other.placeholderFormat, placeholderFormat) &&
             const DeepCollectionEquality()
                 .equals(other.includeTags, includeTags) &&
-            (identical(other.includeComments, includeComments) ||
-                other.includeComments == includeComments) &&
-            (identical(other.includeDescription, includeDescription) ||
-                other.includeDescription == includeDescription) &&
-            (identical(other.jsonUnescapedSlashes, jsonUnescapedSlashes) ||
-                other.jsonUnescapedSlashes == jsonUnescapedSlashes));
+            const DeepCollectionEquality()
+                .equals(other.includeComments, includeComments) &&
+            const DeepCollectionEquality()
+                .equals(other.includeDescription, includeDescription) &&
+            const DeepCollectionEquality()
+                .equals(other.jsonUnescapedSlashes, jsonUnescapedSlashes));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      format,
-      originalFilenames,
-      allPlatforms,
-      pluralFormat,
-      placeholderFormat,
-      const DeepCollectionEquality().hash(includeTags),
-      includeComments,
-      includeDescription,
-      jsonUnescapedSlashes);
 
   @JsonKey(ignore: true)
   @override
-  _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
-      __$FilesDownloadRequestBodyCopyWithImpl<_FilesDownloadRequestBody>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(format),
+      const DeepCollectionEquality().hash(originalFilenames),
+      const DeepCollectionEquality().hash(allPlatforms),
+      const DeepCollectionEquality().hash(pluralFormat),
+      const DeepCollectionEquality().hash(placeholderFormat),
+      const DeepCollectionEquality().hash(includeTags),
+      const DeepCollectionEquality().hash(includeComments),
+      const DeepCollectionEquality().hash(includeDescription),
+      const DeepCollectionEquality().hash(jsonUnescapedSlashes));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FilesDownloadRequestBodyCopyWith<_$_FilesDownloadRequestBody>
+      get copyWith => __$$_FilesDownloadRequestBodyCopyWithImpl<
+          _$_FilesDownloadRequestBody>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -358,55 +318,55 @@ class _$_FilesDownloadRequestBody implements _FilesDownloadRequestBody {
 
 abstract class _FilesDownloadRequestBody implements FilesDownloadRequestBody {
   factory _FilesDownloadRequestBody(
-      {required String format,
+      {required final String format,
       @JsonKey(name: "original_filenames")
-          bool? originalFilenames,
+          final bool? originalFilenames,
       @JsonKey(name: "all_platforms")
-          bool? allPlatforms,
+          final bool? allPlatforms,
       @JsonKey(name: "plural_format")
-          String? pluralFormat,
+          final String? pluralFormat,
       @JsonKey(name: "placeholder_format")
-          String? placeholderFormat,
+          final String? placeholderFormat,
       @JsonKey(name: "include_tags")
-          Iterable<String>? includeTags,
+          final Iterable<String>? includeTags,
       @JsonKey(name: "include_comments")
-          bool? includeComments,
+          final bool? includeComments,
       @JsonKey(name: "include_description")
-          bool? includeDescription,
+          final bool? includeDescription,
       @JsonKey(name: "json_unescaped_slashes")
-          bool? jsonUnescapedSlashes}) = _$_FilesDownloadRequestBody;
+          final bool? jsonUnescapedSlashes}) = _$_FilesDownloadRequestBody;
 
   factory _FilesDownloadRequestBody.fromJson(Map<String, dynamic> json) =
       _$_FilesDownloadRequestBody.fromJson;
 
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "original_filenames")
-  bool? get originalFilenames;
+  bool? get originalFilenames => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "all_platforms")
-  bool? get allPlatforms;
+  bool? get allPlatforms => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "plural_format")
-  String? get pluralFormat;
+  String? get pluralFormat => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "placeholder_format")
-  String? get placeholderFormat;
+  String? get placeholderFormat => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "include_tags")
-  Iterable<String>? get includeTags;
+  Iterable<String>? get includeTags => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "include_comments")
-  bool? get includeComments;
+  bool? get includeComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "include_description")
-  bool? get includeDescription;
+  bool? get includeDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "json_unescaped_slashes")
-  bool? get jsonUnescapedSlashes;
+  bool? get jsonUnescapedSlashes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FilesDownloadRequestBodyCopyWith<_FilesDownloadRequestBody> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FilesDownloadRequestBodyCopyWith<_$_FilesDownloadRequestBody>
+      get copyWith => throw _privateConstructorUsedError;
 }
