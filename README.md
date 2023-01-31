@@ -1,3 +1,5 @@
+# Please note that this repository is not maintained anymore and will be made private to Meniga no later than on 31 december 2023. It is suggested that those using this repository will either fork it or find another tool that provides the same functionality
+
 # flutter_lokalise
 
 [![pub package](https://img.shields.io/pub/v/flutter_lokalise.svg)](https://pub.dev/packages/flutter_lokalise)
