@@ -1,4 +1,4 @@
-# Please note that this repository is not maintained anymore and will be made private to Meniga no later than on 31 december 2023. It is suggested that those using this repository will either fork it or find another tool that provides the same functionality
+# Please note that this repository is not maintained anymore and will be made private to Meniga no later than on 31 december 2023. Recommend using the official [Lokalise Flutter SDK](https://pub.dev/packages/lokalise_flutter_sdk). If you want to start using the Lokalise Flutter SDK, please go to the following page for more information: https://developers.lokalise.com/docs/flutter-sdk
 
 # flutter_lokalise
 
